@@ -1,6 +1,6 @@
 {
   "name": "html-pages",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "engines": {
     "node": ">=6.9.0"
