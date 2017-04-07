@@ -1,10 +1,29 @@
 {
   "name": "html-pages",
-  "version": "0.0.3",
-  "description": "",
+  "title": "HTML Pages",
+  "description": "Simple development http server for file serving and directory listing.",
+  "version": "0.0.5",
   "engines": {
     "node": ">=6.9.0"
   },
+  "keywords": [
+    "html",
+    "front-end",
+    "development",
+    "web",
+    "tool",
+    "now",
+    "http-server",
+    "server",
+    "http",
+    "cli",
+    "dev",
+    "server",
+    "tool",
+    "cors",
+    "mime",
+    "rest"
+  ],
   "main": "index.js",
   "bin": {
     "html-pages": "./index.js"
@@ -13,5 +32,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Daniel Cardoso <npm@danielcardoso.net> (http://www.danielcardoso.net)",
-  "license": "MIT"
+  "homepage": "https://github.com/danielcardoso/html-pages#readme",
+  "bugs": {
+    "url": "https://github.com/danielcardoso/html-pages/issues"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/danielcardoso/html-pages/LICENSE.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielcardoso/html-pages"
+  }
 }
