@@ -1,11 +1,11 @@
 {
   "name": "html-pages",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Daniel Cardoso <npm@danielcardoso.net> (http://www.danielcardoso.net)",
-  "license": "ISC"
+  "license": "MIT"
 }
