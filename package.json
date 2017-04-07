@@ -2,7 +2,13 @@
   "name": "html-pages",
   "version": "0.0.2",
   "description": "",
+  "engines": {
+    "node": ">=6.9.0"
+  },
   "main": "index.js",
+  "bin": {
+    "html-pages": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
