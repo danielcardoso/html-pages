@@ -1,0 +1,1511 @@
+{
+  "file_type_access": {
+    "aliases": [
+      {
+        "name": "Microsoft Access",
+        "extensions": [
+          "adn",
+          "accdb",
+          "accdr",
+          "accdt",
+          "accda",
+          "mdw",
+          "accde",
+          "mam",
+          "maq",
+          "mar",
+          "mat",
+          "maf",
+          "laccdb"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.access"
+      }
+    ]
+  },
+  "file_type_actionscript": {
+    "syntaxes": [
+      {
+        "name": "ActionScript",
+        "scope": "source.actionscript"
+      }
+    ]
+  },
+  "file_type_ae": {
+    "aliases": [
+      {
+        "name": "Adobe After Effects",
+        "extensions": [
+          "aep",
+          "aet"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.ae"
+      }
+    ]
+  },
+  "file_type_ai": {
+    "aliases":[
+      {
+        "name": "Adobe Illustrator",
+        "extensions": [
+          "ai",
+          "eps"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.ai"
+      }
+    ]
+  },
+  "file_type_angular": {
+    "syntaxes": [
+      {
+        "name": "Angular​JS",
+        "scope": "text.html.basic.angularjs"
+      }
+    ]
+  },
+  "file_type_applescript": {
+    "syntaxes": [
+      {
+        "name": "AppleScript",
+        "scope": "source.applescript"
+      }
+    ]
+  },
+  "file_type_archive": {
+    "aliases":[
+      {
+        "name": "Archive",
+        "extensions": [
+          "7z",
+          "7zip",
+          "gz",
+          "pzip",
+          "rar",
+          "saz",
+          "tar",
+          "tgz",
+          "wim",
+          "zip"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.archive"
+      }
+    ]
+  },
+  "file_type_audio": {
+    "aliases":[
+      {
+        "name": "Audio",
+        "extensions": [
+          "mp3",
+          "m4p",
+          "aac",
+          "aiff",
+          "au",
+          "flac",
+          "m4a",
+          "mpc",
+          "mp+",
+          "mpp",
+          "oga",
+          "opus",
+          "ra",
+          "rm",
+          "wav",
+          "wma"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.audio"
+      }
+    ]
+  },
+  "file_type_babel": {
+    "aliases": [
+      {
+        "name": "JSON (Babel)",
+        "linter": "json",
+        "extensions": [
+          ".babelrc"
+        ],
+        "base": "source.json",
+        "scope": "source.json.babel"
+      }
+    ]
+  },
+  "file_type_binary": {
+  },
+  "file_type_blade": {
+    "syntaxes": [
+      {
+        "name": "Laravel Blade Highlighter",
+        "scope": "text.blade"
+      }
+    ]
+  },
+  "file_type_bower": {
+    "aliases":[
+      {
+        "name": "JSON (Bower)",
+        "linter": "json",
+        "extensions": [
+          "bower.json",
+          ".bowerrc"
+        ],
+        "base": "source.json",
+        "scope": "source.json.bower"
+      }
+    ]
+  },
+  "file_type_c": {
+    "syntaxes": [
+      {
+        "name": "C",
+        "scope": "source.c"
+      },
+      {
+        "name": "Objective-C",
+        "scope": "source.objc"
+      }
+    ]
+  },
+  "file_type_circleci": {
+    "aliases":[
+      {
+        "name": "YAML (CircleCI)",
+        "linter": "yaml",
+        "extensions": [
+          "circle.yml"
+        ],
+        "base": "source.yaml",
+        "scope": "source.yaml.circleci"
+      }
+    ]
+  },
+  "file_type_cf": {
+    "syntaxes": [
+      {
+        "name": "ColdFusion",
+        "scope": "source.cfscript.cfc, text.html.cfm"
+      },
+      {
+        "name": "CFML",
+        "scope": "embedding.cfml, source.cfml.script"
+      }
+    ]
+  },
+  "file_type_clojure": {
+    "syntaxes": [
+      {
+        "name": "Clojure",
+        "scope": "source.clojure"
+      }
+    ]
+  },
+  "file_type_coffeescript": {
+    "syntaxes": [
+      {
+        "name": "CoffeeScript",
+        "scope": "source.coffee"
+      }
+    ]
+  },
+  "file_type_composer": {
+    "aliases": [
+      {
+        "name": "JSON (Composer)",
+        "linter": "json",
+        "extensions": [
+          "composer.json",
+          "composer.lock"
+        ],
+        "base": "source.json",
+        "scope": "source.json.composer"
+      }
+    ]
+  },
+  "file_type_cpp": {
+    "syntaxes": [
+      {
+        "name": "C++",
+        "scope": "source.c++"
+      }, {
+        "name": "C++",
+        "scope": "source.cpp"
+      }
+    ]
+  },
+  "file_type_csharp": {
+    "syntaxes": [
+      {
+        "name": "C#",
+        "scope": "source.cs"
+      }
+    ]
+  },
+  "file_type_css": {
+    "syntaxes": [
+      {
+        "name": "CSS",
+        "scope": "source.css"
+      }
+    ]
+  },
+  "file_type_csv": {
+    "syntaxes": [
+      {
+        "name": "Advanced CSV",
+        "scope": "text.advanced_csv"
+      },
+      {
+        "name": "CSV Misc",
+        "scope": "text.csv"
+      }
+    ]
+  },
+  "file_type_dart": {
+    "syntaxes": [
+      {
+        "name": "Dart",
+        "scope": "source.dart"
+      }
+    ]
+  },
+  "file_type_default": {
+  },
+  "file_type_dlang": {
+    "syntaxes": [
+      {
+        "name": "D",
+        "scope": "source.d"
+      }
+    ]
+  },
+  "file_type_docker": {
+    "syntaxes": [
+      {
+        "name": "Dockerfile",
+        "scope": "source.dockerfile"
+      }
+    ],
+    "aliases": [
+      {
+        "name": "YAML (Docker)",
+        "linter": "yaml",
+        "extensions": [
+          "docker-compose.yml"
+        ],
+        "base": "source.yaml",
+        "scope": "source.yaml.docker"
+      }
+    ]
+  },
+  "file_type_dotnet": {
+    "syntaxes": [
+      {
+        "name": "ASP",
+        "scope": "source.asp"
+      },
+      {
+        "name": "HTML (ASP)",
+        "scope": "text.html.asp"
+      }
+    ]
+  },
+  "file_type_editorconfig": {
+    "syntaxes": [
+      {
+        "name": "EditorConfig",
+        "scope": "source.ini.editorconfig"
+      }
+    ]
+  },
+  "file_type_elm": {
+    "syntaxes": [
+      {
+        "name": "Elm",
+        "scope": "source.elm"
+      }
+    ]
+  },
+  "file_type_erlang": {
+    "syntaxes": [
+      {
+        "name": "Erlang",
+        "scope": "source.erlang"
+      }
+    ]
+  },
+  "file_type_eslint": {
+    "aliases": [
+      {
+        "name": "JSON (ESLint)",
+        "linter": "json",
+        "extensions": [
+          ".eslintrc",
+          ".eslintrc.json"
+        ],
+        "base": "source.json",
+        "scope": "source.json.eslint"
+      },
+      {
+        "name": "JavaScript (ESLint)",
+        "linter": "javascript",
+        "extensions": [
+          ".eslintrc.js"
+        ],
+        "base": "source.js",
+        "scope": "source.js.eslint"
+      },
+      {
+        "name": "YAML (ESLint)",
+        "linter": "yaml",
+        "extensions": [
+          ".eslintrc.yaml",
+          ".eslintrc.yml"
+        ],
+        "base": "source.yaml",
+        "scope": "source.yaml.eslint"
+      },
+      {
+        "name": "Shell Script (ESLint)",
+        "extensions": [
+          ".eslintignore"
+        ],
+        "base": "source.shell",
+        "scope": "source.shell.eslint"
+      },
+      {
+        "name": "ESLint",
+        "extensions": [
+          ".eslintcache"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.eslint"
+      }
+    ]
+  },
+  "file_type_ex": {
+    "syntaxes": [
+      {
+        "name": "Elixir",
+        "scope": "source.elixir, text.html.elixir"
+      }
+    ]
+  },
+  "file_type_excel": {
+    "aliases": [
+      {
+        "name": "Microsoft Excel",
+        "extensions": [
+          "xls",
+          "xlsx",
+          "xlsm",
+          "xlsb",
+          "xlt"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.excel"
+      }
+    ]
+  },
+  "file_type_font": {
+    "aliases":[
+      {
+        "name": "Font",
+        "extensions": [
+          "eot",
+          "otf",
+          "ttf",
+          "woff",
+          "woff2"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.font"
+      }
+    ]
+  },
+  "file_type_git": {
+    "syntaxes": [
+      {
+        "name": "GitSyntaxes",
+        "scope": "text.git"
+      },
+      {
+        "name": "Git Misc Packages",
+        "scope": "source.git"
+      }
+    ],
+    "aliases": [
+      {
+        "name": "Shell Script (Git)",
+        "extensions": [
+          ".gitignore",
+          ".gitkeep"
+        ],
+        "base": "source.shell",
+        "scope": "source.shell.git"
+      }
+    ]
+  },
+  "file_type_go": {
+    "syntaxes": [
+      {
+        "name": "Go",
+        "scope": "source.go"
+      }
+    ]
+  },
+  "file_type_gradle": {
+    "syntaxes": [
+      {
+        "name": "Gradle_Language",
+        "scope": "source.gradle"
+      }
+    ],
+    "aliases": [
+      {
+        "name": "Groovy (Gradle)",
+        "extensions": [
+          "gradle"
+        ],
+        "base": "source.groovy",
+        "scope": "source.groovy.gradle"
+      }
+    ]
+  },
+  "file_type_graphviz": {
+    "syntaxes": [
+      {
+        "name": "Graphviz (DOT)",
+        "scope": "source.dot"
+      }
+    ]
+  },
+  "file_type_groovy": {
+    "syntaxes": [
+      {
+        "name": "Groovy",
+        "scope": "source.groovy"
+      }
+    ]
+  },
+  "file_type_gruntfile": {
+    "aliases": [
+      {
+        "name": "JavaScript (Gruntfile)",
+        "linter": "javascript",
+        "extensions": [
+          "gruntfile.js"
+        ],
+        "base": "source.js",
+        "scope": "source.js.gruntfile"
+      }
+    ]
+  },
+  "file_type_gulpfile": {
+    "aliases": [
+      {
+        "name": "JavaScript (Gulpfile)",
+        "linter": "javascript",
+        "extensions": [
+          "gulpfile.js",
+          "gulpfile.babel.js"
+        ],
+        "base": "source.js",
+        "scope": "source.js.gulpfile"
+      },
+      {
+        "name": "CoffeeScript (Gulpfile)",
+        "linter": "coffeescript",
+        "extensions": [
+          "gulpfile.coffee"
+        ],
+        "base": "source.coffee",
+        "scope": "source.coffee.gulpfile"
+      }
+    ]
+  },
+  "file_type_haml": {
+    "syntaxes": [
+      {
+        "name": "Ruby Haml",
+        "scope": "text.haml"
+      }
+    ]
+  },
+  "file_type_haskell": {
+    "syntaxes": [
+      {
+        "name": "Haskell",
+        "scope": "source.haskell"
+      }
+    ]
+  },
+  "file_type_haxe": {
+    "syntaxes": [
+      {
+        "name": "Haxe",
+        "scope": "source.haxe"
+      }
+    ]
+  },
+  "file_type_html": {
+    "syntaxes": [
+      {
+        "name": "HTML",
+        "scope": "text.html.basic"
+      }
+    ]
+  },
+  "file_type_image": {
+    "aliases": [
+      {
+        "name": "Image",
+        "linter": "Image",
+        "extensions": [
+          "ani",
+          "bmp",
+          "gif",
+          "img",
+          "jpe",
+          "jpeg",
+          "jpg",
+          "png",
+          "tga",
+          "tiff"
+        ]
+      }
+    ]
+  },
+  "file_type_indesign": {
+    "aliases": [
+      {
+        "name": "Adobe InDesign",
+        "extensions": [
+          "indd",
+          "indl",
+          "indt",
+          "indb",
+          "inx",
+          "idml"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.indesign"
+      }
+    ]
+  },
+  "file_type_java": {
+    "syntaxes": [
+      {
+        "name": "Java",
+        "scope": "source.java"
+      }
+    ]
+  },
+  "file_type_js": {
+    "aliases": [
+      {
+        "name": "JavaScript",
+        "linter": "JavaScript",
+        "extensions": [
+          "js"
+        ]
+      }
+    ]
+  },
+  "file_type_jsx": {
+    "aliases": [
+      {
+        "name": "JavaScript (React)",
+        "linter": "JavaScript (React)",
+        "extensions": [
+          "jsx",
+          "cjsx"
+        ]
+      }
+    ]
+  },
+  "file_type_json": {
+    "syntaxes": [
+      {
+        "name": "JSON",
+        "scope": "source.json"
+      }
+    ]
+  },
+  "file_type_jsp": {
+    "syntaxes": [
+      {
+        "name": "JSP",
+        "scope": "text.html.jsp"
+      }
+    ]
+  },
+  "file_type_julia": {
+    "syntaxes": [
+      {
+        "name": "Julia",
+        "scope": "source.julia"
+      }
+    ]
+  },
+  "file_type_kotlin": {
+    "syntaxes": [
+      {
+        "name": "Kotlin",
+        "scope": "source.Kotlin"
+      }
+    ]
+  },
+  "file_type_less": {
+    "syntaxes": [
+      {
+        "name": "LESS",
+        "scope": "source.less"
+      }
+    ]
+  },
+  "file_type_license": {
+    "aliases": [
+      {
+        "name": "License",
+        "extensions": [
+          "license"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.license"
+      },
+      {
+        "name": "Markdown (License)",
+        "extensions": [
+          "license.md"
+        ],
+        "base": "text.html.markdown",
+        "scope": "text.html.markdown.license"
+      }
+    ]
+  },
+  "file_type_liquid": {
+    "syntaxes": [
+      {
+        "name": "Siteleaf Liquid Syntax",
+        "scope": "text.html.liquid"
+      }
+    ]
+  },
+  "file_type_lisp": {
+    "syntaxes": [
+      {
+        "name": "Lisp",
+        "scope": "source.lisp"
+      }
+    ]
+  },
+  "file_type_lock": {
+    "aliases": [
+      {
+        "name": "YAML (Lock)",
+        "linter": "yaml",
+        "extensions": [
+          "Gemfile.lock"
+        ],
+        "base": "source.yaml",
+        "scope": "source.yaml.lock"
+      }
+    ]
+  },
+  "file_type_log": {
+    "aliases": [
+      {
+        "name": "Log",
+        "extensions": [
+          "log",
+          "txt"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.log"
+      }
+    ]
+  },
+  "file_type_lsl": {
+    "syntaxes": [
+      {
+        "name": "LSL",
+        "scope": "source.lsl, source.ossl"
+      }
+    ]
+  },
+  "file_type_lua": {
+    "syntaxes": [
+      {
+        "name": "Lua",
+        "scope": "source.lua"
+      }
+    ]
+  },
+  "file_type_markdown": {
+    "syntaxes": [
+      {
+        "name": "Markdown",
+        "scope": "text.html.markdown"
+      }, {
+        "name": "Markdown",
+        "scope": "text.html.md"
+      }
+    ]
+  },
+  "file_type_markup": {
+  },
+  "file_type_matlab": {
+    "syntaxes": [
+      {
+        "name": "MATLAB",
+        "scope": "source.matlab"
+      }
+    ]
+  },
+  "file_type_maya": {
+    "syntaxes": [
+      {
+        "name": "MEL",
+        "scope": "source.mel"
+      }
+    ]
+  },
+  "file_type_mustache": {
+    "syntaxes": [
+      {
+        "name": "HTML Mustache",
+        "scope": "txt.html.mustache, text.html.hgn"
+      },
+      {
+        "name": "Handlebars",
+        "scope": "text.html.handlebars"
+      },
+      {
+        "name": "Handlebars",
+        "scope": "text.html.hbs"
+      },
+      {
+        "name": "Hamlbars",
+        "scope": "source.hamlbars"
+      }
+    ]
+  },
+  "file_type_nginx": {
+    "syntaxes": [
+      {
+        "name": "nginx",
+        "scope": "source.nginx"
+      }
+    ]
+  },
+  "file_type_nodejs": {
+    "aliases":[
+      {
+        "name": "NodeJS",
+        "extensions": [
+          ".node-version",
+          ".nvmrc"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.nodejs"
+      }
+    ]
+  },
+  "file_type_note": {
+    "syntaxes": [
+      {
+        "name": "PlainNotes",
+        "scope": "text.html.markdown.note"
+      }
+    ]
+  },
+  "file_type_npm": {
+    "aliases": [
+      {
+        "name": "Shell Script (NPM)",
+        "extensions": [
+          ".npmignore",
+          ".npmrc"
+        ],
+        "base": "source.shell",
+        "scope": "source.shell.npm"
+      },
+      {
+        "name": "JSON (NPM)",
+        "linter": "json",
+        "extensions": [
+          "package.json"
+        ],
+        "base": "source.json",
+        "scope": "source.json.npm"
+      }
+    ]
+  },
+  "file_type_nsis": {
+    "syntaxes": [
+      {
+        "name": "NSIS",
+        "scope": "source.nsis"
+      }
+    ]
+  },
+  "file_type_ocaml": {
+    "syntaxes": [
+      {
+        "name": "OCaml",
+        "scope": "source.ocaml, source.ocamllex, source.ocamlyacc, source.camlp4.ocaml"
+      }
+    ]
+  },
+  "file_type_onenote": {
+    "aliases": [
+      {
+        "name": "Microsoft OneNote",
+        "extensions": [
+          "one"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.onenote"
+      }
+    ]
+  },
+  "file_type_pdf": {
+    "aliases": [
+      {
+        "name": "PDF",
+        "extensions": [
+          "pdf"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.pdf"
+      }
+    ]
+  },
+  "file_type_perl": {
+    "syntaxes": [
+      {
+        "name": "Perl",
+        "scope": "source.perl"
+      }
+    ]
+  },
+  "file_type_php": {
+    "syntaxes": [
+      {
+        "name": "PHP",
+        "scope": "embedding.php, source.php"
+      }
+    ]
+  },
+  "file_type_plist": {
+    "syntaxes": [
+      {
+        "name": "plist",
+        "scope": "text.plist"
+      }
+    ]
+  },
+  "file_type_postcss": {
+    "syntaxes": [
+      {
+        "name": "Syntax Highlighting for Post​CSS",
+        "scope": "source.postcss"
+      }
+    ],
+    "aliases": [
+      {
+        "name": "JSON (PostCSS)",
+        "linter": "json",
+        "extensions": [
+          ".postcssrc"
+        ],
+        "base": "source.json",
+        "scope": "source.json.postcss"
+      },
+      {
+        "name": "JavaScript (PostCSS)",
+        "linter": "javascript",
+        "extensions": [
+          "postcss.config.js"
+        ],
+        "base": "source.js",
+        "scope": "source.js.postcss"
+      }
+    ]
+  },
+  "file_type_powerpoint": {
+    "aliases": [
+      {
+        "name": "Microsoft PowerPoint",
+        "extensions": [
+          "ppt",
+          "pptx",
+          "pps",
+          "ppsx"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.powerpoint"
+      }
+    ]
+  },
+  "file_type_powershell": {
+    "syntaxes": [
+      {
+        "name": "PowerShell",
+        "scope": "source.powershell"
+      }
+    ]
+  },
+  "file_type_preferences": {
+    "syntaxes": [
+      {
+        "name": "ApacheConf",
+        "scope": "source.apacheconf"
+      }
+    ]
+  },
+  "file_type_premiere": {
+    "aliases": [
+      {
+        "name": "Adobe Premiere Pro",
+        "extensions": [
+          "prel",
+          "prproj",
+          "psq"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.premiere"
+      }
+    ]
+  },
+  "file_type_procfile": {
+    "aliases": [
+      {
+        "name": "YAML (Procfile)",
+        "linter": "yaml",
+        "extensions": [
+          "Procfile"
+        ],
+        "base": "source.yaml",
+        "scope": "source.yaml.procfile"
+      }
+    ]
+  },
+  "file_type_psd": {
+    "aliases": [
+      {
+        "name": "Adobe Photoshop",
+        "extensions": [
+          "psb",
+          "psd"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.ps"
+      }
+    ]
+  },
+  "file_type_pug": {
+    "syntaxes": [
+      {
+        "name": "Jade",
+        "scope": "text.jade"
+      },
+      {
+        "name": "Pug",
+        "scope": "text.pug"
+      }
+    ]
+  },
+  "file_type_puppet": {
+    "syntaxes": [
+      {
+        "name": "Puppet",
+        "scope": "source.puppet"
+      }
+    ]
+  },
+  "file_type_python": {
+    "syntaxes": [
+      {
+        "name": "Python",
+        "scope": "source.python"
+      }
+    ]
+  },
+  "file_type_r": {
+    "syntaxes": [
+      {
+        "name": "R",
+        "scope": "source.r"
+      }
+    ]
+  },
+  "file_type_rails": {
+    "syntaxes": [
+      {
+        "name": "Rails",
+        "scope": "source.ruby.rails, text.html.ruby"
+      }
+    ]
+  },
+  "file_type_riot": {
+    "syntaxes": [
+      {
+        "name": "Riot (Jade/Pug)",
+        "scope": "source.jade.riot"
+      },
+      {
+        "name": "Riot (HTML)",
+        "scope": "text.html.riot"
+      }
+    ]
+  },
+  "file_type_ruby": {
+    "syntaxes": [
+      {
+        "name": "Ruby",
+        "scope": "source.ruby"
+      }
+    ],
+    "aliases": [
+      {
+        "name": "Shell Script (Ruby)",
+        "extensions": [
+          ".rvmrc"
+        ],
+        "base": "source.shell",
+        "scope": "source.shell.ruby"
+      },
+      {
+        "name": "Ruby",
+        "extensions": [
+          ".ruby-version",
+          ".ruby-gemset",
+          ".rspec"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.ruby"
+      }
+    ]
+  },
+  "file_type_rust": {
+    "syntaxes": [
+      {
+        "name": "Rust",
+        "scope": "source.rust"
+      }
+    ]
+  },
+  "file_type_sass": {
+    "syntaxes": [
+      {
+        "name": "Sass",
+        "scope": "source.sass"
+      }
+    ]
+  },
+  "file_type_scala": {
+    "syntaxes": [
+      {
+        "name": "Scala",
+        "scope": "source.scala"
+      }
+    ]
+  },
+  "file_type_scss": {
+    "syntaxes": [
+      {
+        "name": "SCSS",
+        "scope": "source.scss"
+      }
+    ]
+  },
+  "file_type_settings": {
+    "syntaxes": [
+      {
+        "name": "INI",
+        "scope": "source.ini"
+      },
+      {
+        "name": "Dot​ENV",
+        "scope": "source.env"
+      }
+    ],
+    "aliases": [
+      {
+        "name": "JSON (Settings)",
+        "linter": "json",
+        "extensions": [
+          "jsbeautifyrc"
+        ],
+        "base": "source.json",
+        "scope": "source.json.settings"
+      },
+      {
+        "name": "XML (Config)",
+        "linter": "xml",
+        "extensions": [
+          "config"
+        ],
+        "base": "text.xml",
+        "scope": "text.xml.config"
+      }
+    ]
+  },
+  "file_type_shell": {
+    "syntaxes": [
+      {
+        "name": "Shell Script (Bash)",
+        "scope": "source.shell"
+      }, 
+      {
+        "name": "Shell Script (Bash)",
+        "scope": "source.sh"
+      },
+      {
+        "name": "Shell Script (Fish)",
+        "scope": "source.fish"
+      }
+    ]
+  },
+  "file_type_sketch": {
+    "aliases":[
+      {
+        "name": "Sketch",
+        "extensions": [
+          "sketch"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.sketch"
+      }
+    ]
+  },
+  "file_type_slim": {
+    "syntaxes": [
+      {
+        "name": "Ruby Slim",
+        "scope": "text.slim"
+      }
+    ]
+  },
+  "file_type_source": {
+  },
+  "file_type_sql": {
+    "syntaxes": [
+      {
+        "name": "SQL",
+        "scope": "source.sql"
+      }
+    ]
+  },
+  "file_type_stata": {
+    "syntaxes": [
+      {
+        "name": "Stata",
+        "scope": "source.stata"
+      }
+    ]
+  },
+  "file_type_stylelint": {
+    "aliases": [
+      {
+        "name": "JSON (Stylelint)",
+        "linter": "json",
+        "extensions": [
+          ".stylelintrc",
+          ".stylelintrc.json"
+        ],
+        "base": "source.json",
+        "scope": "source.json.stylelint"
+      },
+      {
+        "name": "JavaScript (Stylelint)",
+        "linter": "javascript",
+        "extensions": [
+          ".stylelintrc.js",
+          "stylelint.config.js"
+        ],
+        "base": "source.js",
+        "scope": "source.js.stylelint"
+      },
+      {
+        "name": "YAML (Stylelint)",
+        "linter": "yaml",
+        "extensions": [
+          ".stylelintrc.yaml",
+          ".stylelintrc.yml"
+        ],
+        "base": "source.yaml",
+        "scope": "source.yaml.stylelint"
+      },
+      {
+        "name": "Shell Script (Stylelint)",
+        "extensions": [
+          ".stylelintignore"
+        ],
+        "base": "source.shell",
+        "scope": "source.shell.stylelint"
+      }
+    ]
+  },
+  "file_type_stylus": {
+    "syntaxes": [
+      {
+        "name": "Stylus",
+        "scope": "source.stylus"
+      }
+    ]
+  },
+  "file_type_sublime": {
+    "syntaxes": [
+      {
+        "name": "Sublime Text Key Map",
+        "scope": "source.sublimekeymap"
+      },
+      {
+        "name": "Sublime Settings",
+        "scope": "source.sublime-settings"
+      }
+    ],
+    "aliases": [
+      {
+        "name": "JSON (Sublime)",
+        "linter": "json",
+        "extensions": [
+          ".no-sublime-package",
+          "sublime-commands",
+          "sublime-menu",
+          "sublime-project",
+          "sublime-settings",
+          "sublime-theme",
+          "sublime-workspace",
+          "sublime-keymap",
+          "sublime-mousemap"
+        ],
+        "base": "source.json",
+        "scope": "source.json.sublime"
+      }
+    ]
+  },
+  "file_type_svg": {
+    "aliases": [
+      {
+        "name": "XML (SVG)",
+        "linter": "xml",
+        "extensions": [
+          "svg",
+          "svgx",
+          "dxf"
+        ],
+        "base": "text.xml",
+        "scope": "text.xml.svg"
+      }
+    ]
+  },
+  "file_type_swift": {
+    "syntaxes": [
+      {
+        "name": "Swift",
+        "scope": "source.swift"
+      }
+    ]
+  },
+  "file_type_tcl": {
+    "syntaxes": [
+      {
+        "name": "Tcl",
+        "scope": "source.tcl"
+      }
+    ]
+  },
+  "file_type_tern": {
+    "aliases": [
+      {
+        "name": "JSON (Tern JS)",
+        "linter": "json",
+        "extensions": [
+          ".tern-project",
+          ".tern-config"
+        ],
+        "base": "source.json",
+        "scope": "source.json.tern"
+      }
+    ]
+  },
+  "file_type_tex": {
+    "syntaxes": [
+      {
+        "name": "LaTeX",
+        "scope": "text.tex, text.bibtex, text.log.latex"
+      }
+    ]
+  },
+  "file_type_text": {
+  },
+  "file_type_textile": {
+    "syntaxes": [
+      {
+        "name": "Textile",
+        "scope": "text.html.textile"
+      }
+    ]
+  },
+  "file_type_todo": {
+    "syntaxes": [
+      {
+        "name": "PlainTasks",
+        "scope": "text.todo"
+      }
+    ]
+  },
+  "file_type_twig": {
+    "syntaxes": [
+      {
+        "name": "PHP-Twig",
+        "scope": "text.html.twig"
+      }
+    ]
+  },
+  "file_type_typescript": {
+    "syntaxes": [
+      {
+        "name": "TypeScript",
+        "scope": "source.ts"
+      }
+    ]
+  },
+  "file_type_video": {
+    "aliases":[
+      {
+        "name": "Video",
+        "extensions": [
+          "avi",
+          "mp4",
+          "mov",
+          "mkv",
+          "h264",
+          "webm",
+          "wmv",
+          "ogv",
+          "ogg",
+          "3gp",
+          "m4v",
+          "mpg",
+          "mpeg",
+          "3gpp",
+          "ogm"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.video"
+      }
+    ]
+  },
+  "file_type_vim": {
+    "syntaxes": [
+      {
+        "name": "VimL",
+        "scope": "source.viml"
+      }
+    ],
+    "aliases": [
+      {
+        "name": "Vimrc (VimL)",
+        "extensions": [
+          ".vimrc",
+          ".gvimrc",
+          "_vimrc",
+          "_gvimrc"
+        ],
+        "base": "source.viml",
+        "scope": "source.viml.vimrc"
+      }
+    ]
+  },
+  "file_type_vue": {
+    "syntaxes": [
+      {
+        "name": "Vue Syntax Highlight",
+        "scope": "text.html.vue"
+      }
+    ]
+  },
+  "file_type_webpack": {
+    "aliases": [
+      {
+        "name": "JavaScript (Webpack)",
+        "linter": "javascript",
+        "extensions": [
+          "webpack.config.js",
+          "webpack.config.babel.js"
+        ],
+        "base": "source.js",
+        "scope": "source.js.webpack"
+      }
+    ]
+  },
+  "file_type_windows": {
+    "syntaxes": [
+      {
+        "name": "Batch File",
+        "scope": "source.dosbatch"
+      }
+    ],
+    "aliases": [
+      {
+        "name": "Windows Shortcut",
+        "extensions": [
+          "lnk"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.lnk"
+      }
+    ]
+  },
+  "file_type_word": {
+    "aliases": [
+      {
+        "name": "Microsoft Word",
+        "extensions": [
+          "doc",
+          "docx",
+          "docm",
+          "docxml",
+          "dotm",
+          "dotx",
+          "wri"
+        ],
+        "base": "text.plain",
+        "scope": "text.plain.word"
+      }
+    ]
+  },
+  "file_type_yaml": {
+    "syntaxes": [
+      {
+        "name": "YAML",
+        "scope": "source.yaml"
+      }, {
+        "name": "YML",
+        "scope": "source.yml"
+      }
+    ]
+  },
+  "file_type_yarn": {
+    "aliases": [
+      {
+        "name": "YAML (Yarn)",
+        "linter": "yaml",
+        "extensions": [
+          "yarn",
+          "yarn.lock"
+        ],
+        "base": "source.yaml",
+        "scope": "source.yaml.yarn"
+      }
+    ]
+  }
+}

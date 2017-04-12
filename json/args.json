@@ -1,0 +1,74 @@
+{
+  "options": [
+    {
+      "name": "port",
+      "description": "Port to listen on",
+      "defaultValue": 8084,
+      "validations": "isNumber"
+    },
+    {
+      "name": "cache",
+      "description": "Time in milliseconds for caching files in the browser",
+      "defaultValue": 3600,
+      "validations": "isNumber"
+    },
+    {
+      "name": "noCache",
+      "description": "Disabled the caching files in the browser"
+    },
+    {
+      "name": "cors",
+      "description": "Setup CORS headers to allow requests from any origin"
+    },
+    {
+      "name": "directoryIndex",
+      "description": "The index file of a directory. Set to false to always show the directory listing.",
+      "defaultValue": "index.html",
+      "validations": "isFileName"
+    },
+    {
+      "name": "noListing",
+      "description": "Turn off the directory listings.",
+      "isBoolean": true
+    },
+
+
+
+
+
+
+
+    {
+      "name": "auth",
+      "description": "Enables http-auth using the `PAGES_USER` and `PAGES_PASSWORD` environment variables",
+      "isBoolean": true
+    },
+    {
+      "name": "unzipped",
+      "description": "Disable GZIP compression",
+      "isBoolean": true
+    },
+    {
+      "name": "noClipboard",
+      "description": "Don't copy address to clipboard",
+      "isBoolean": true
+    },
+    {
+      "name": "silent",
+      "description": "Don't log anything to the console",
+      "isBoolean": true
+    },
+
+
+
+
+
+
+
+    {
+      "name": "ignore",
+      "description": "Files and directories to ignore"
+    }
+
+  ]
+}

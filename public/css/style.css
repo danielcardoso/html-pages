@@ -1,0 +1,370 @@
+/*------------------------------------*\
+    HTML Page
+    by @DanielCardoso
+
+    Theme name: Pages
+    Theme author: @DanielCardoso
+\*------------------------------------*/
+
+@import url("//fonts.googleapis.com/css?family=Roboto:300,400,500");
+
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    min-height: 100%;
+    font-family: "Roboto", "Helvetica Neue", "Lucida Grande", "Arial", sans-serif;
+    font-size: 1em;
+    color: #80858B;
+}
+body {
+    height: auto;
+    border-top: 12px solid #E4E6E9;
+    border-bottom: 12px solid #E4E6E9;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2em;
+    -webkit-backface-visibility: hidden;
+    position: relative;
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+}
+code {
+    font-family: consolas,monospace;
+}
+
+a,
+img {
+    border: none;
+    outline: none;
+}
+
+a {
+    color: rgba(0,0,0,.85);
+    text-decoration: none;
+    transition: color 300ms ease;
+}
+a:hover {
+    color: #3498db;
+}
+
+
+/* --------------------------------
+
+Basic Style
+
+-------------------------------- */
+
+
+
+
+/*------------------------------------*\
+    Wrapper
+\*------------------------------------*/
+
+.error-page {
+    height: 100%;
+    padding: 0;
+    border-width: 0;
+}
+
+.error-page section.vertical-aligned {
+    display: table;
+}
+
+.error-page section.vertical-aligned > .section-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.error-page section {
+    position: relative;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    margin-bottom: -10px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    border: 10px solid #fff;
+    text-align: center;
+
+    color: #fff;
+
+    background: rgb(54, 186, 194);
+    background: linear-gradient(-45deg, rgb(60, 211, 173), rgb(54, 186, 194));
+}
+
+.error-page h1 {
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    font-size: 48px;
+    font-size: 3.2rem;
+}
+
+.error-page h2 {
+    margin-top: 24px;
+    margin-bottom: 100px;
+
+    font-size: 32px;
+    font-size: 1.0rem;
+    position: relative;
+}
+
+.light-typo {
+    font-weight: 200;
+}
+
+
+.error-page h2:after {
+    content: "";
+    display: block;
+    width: 74px;
+    height: 65px;
+    position: absolute;
+    top: 90px;
+    top: 3.4rem;
+    left: 50%;
+    margin-left: -37px;
+
+    background: transparent url("../images/structure/404-alert.png") center center no-repeat;
+}
+
+
+/*------------------------------------*\
+    Wrapper
+\*------------------------------------*/
+.wrapper {
+    max-width: 80%;
+    padding-top: 20px;
+    margin: 0 auto 60px;
+}
+
+/*------------------------------------*\
+    Breadcrumb
+\*------------------------------------*/
+
+.breadcrumb {
+    padding: 0 20px;
+}
+
+.breadcrumb::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+.breadcrumb li {
+    display: inline-block;
+    float: left;
+    margin: .5em 0;
+}
+.breadcrumb li::after {
+    /* this is the separator between items */
+    display: inline-block;
+    margin: 0 .6em;
+    color: #bdc3c7;
+    content: "\00bb";
+}
+.breadcrumb li:last-of-type::after {
+    /* hide separator after the last item */
+    display: none;
+}
+.breadcrumb li > * {
+    /* single step */
+    display: inline-block;
+    font-size: 1em;
+    float: left;
+}
+.breadcrumb li.current > * {
+    /* selected step */
+    color: #95a5a6;
+}
+.no-touch .breadcrumb a:hover {
+    /* steps already visited */
+}
+
+/*------------------------------------*\
+    Table (directory listing)
+\*------------------------------------*/
+table {
+    table-layout: fixed;
+    width: 100%;
+    font-size: 1em;
+    border-collapse: collapse;
+}
+tr {
+    border: 0;
+    outline: 0;
+}
+tr:hover td {
+    background: #f6f6f6;
+}
+th {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(0,0,0,.54);
+}
+
+th,
+td {
+    line-height: 48px;
+    text-align: left;
+    padding: 0;
+    padding-right: 10px;
+    vertical-align: middle;
+    box-sizing: content-box;
+}
+
+td {
+    color: rgba(0,0,0,.54);
+    text-align: left;
+    border-width: 0;
+    outline: 0;
+    line-height: 42px;
+    transition: background 300ms ease;
+}
+
+tr {
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:last-child {
+    border-width: 0;
+}
+
+td a {
+    display: block;
+}
+
+
+.parent a {
+    color: rgba(0,0,0,.45);
+}
+
+.parent a:hover {
+    color: #3498db;
+}
+
+.broken-words {
+    line-height: 22px;
+    height: 22px;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+.text-left {
+    text-align: left !important;
+}
+.text-center {
+    text-align: center !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.column-file-icon {
+    width: 25px;
+    padding-left: 17px;
+    padding-right: 0px;
+    display: none;
+}
+
+.column-file-icon a {
+    padding: 11px 0;
+    padding-right: 5px;
+}
+
+.column-file-name {
+    padding-left: 20px;
+}
+.column-file-last-created,
+.column-file-last-modified {
+    width: 20%;
+}
+.column-file-size {
+    width: 60px;
+    padding-right: 20px;
+}
+
+.file-icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-top: 0;
+    overflow: hidden;
+    padding: 2px;
+    display: block;
+    float: left;
+    margin-top: 11px;
+    margin-right: 6px;
+    display: none;
+}
+
+.file-type {
+    position: relative;
+    display: block;
+    width: 32px;
+    transform: scale(.5);
+    margin: -9px 0 0 -8px;
+}
+
+.file-type:not(.file-type--structure) {
+    margin-top: -7px;
+}
+
+/*
+.file-type {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-bottom: -5px;
+    transform: scale(0.65);
+}
+
+.file-type--structure {
+    width: 20px;
+    height: 20px;
+    margin-bottom: -5px;
+    transform: scale(1);
+}*/
+
+
+.column-file-name a {
+    font-size: 14px;
+    font-weight: 500;
+
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*------------------------------------*\
+    Footer
+\*------------------------------------*/
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: .95em;
+    text-align: center;
+}

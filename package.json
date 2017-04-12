@@ -1,37 +1,34 @@
 {
   "name": "html-pages",
   "title": "HTML Pages",
-  "description": "Simple development http server for file serving and directory listing.",
-  "version": "0.0.14",
+  "description": "Simple development http server for file serving and directory listing made by a Designer. Use it for hacking your HTML/JavaScript/CSS files, but not for deploying your final site.",
+  "version": "0.0.88",
+  "scripts": {
+    "_precommit": "lint-staged",
+    "js-style-linter": "xo",
+    "generate-example": "node ./lib/generate-files.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "public",
+    "views",
+    "LICENSE.md"
+  ],
+  "main": "./lib/api.js",
+  "bin": {
+    "html-pages": "./bin/index.js"
+  },
   "engines": {
     "node": ">=6.9.0"
   },
-  "keywords": [
-    "html",
-    "front-end",
-    "development",
-    "web",
-    "tool",
-    "now",
-    "http-server",
-    "server",
-    "http",
-    "cli",
-    "dev",
-    "server",
-    "tool",
-    "cors",
-    "mime",
-    "rest"
-  ],
-  "main": "index.js",
-  "bin": {
-    "html-pages": "./index.js"
+  "author": {
+    "name": "Daniel Cardoso",
+    "github": {
+      "username": "@DanielCardoso",
+      "link": "http://www.github.com/danielcardoso"
+    }
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Daniel Cardoso <npm@danielcardoso.net> (http://www.danielcardoso.net)",
   "homepage": "https://github.com/danielcardoso/html-pages#readme",
   "bugs": {
     "url": "https://github.com/danielcardoso/html-pages/issues"
@@ -39,24 +36,54 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/danielcardoso/html-pages"
+    "url": "https://github.com/danielcardoso/html-pages.git"
   },
-
-
+  "xo": {
+    "ignore": "public/**",
+    "no-semicolon": false,
+    "no-esnext": false,
+    "extends": "prettier"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run js-style-linter",
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "keywords": [
+    "now",
+    "http-server",
+    "html",
+    "front-end",
+    "development",
+    "tool",
+    "http",
+    "cli",
+    "dev",
+    "web",
+    "tool",
+    "cors",
+    "mime",
+    "rest",
+    "static",
+    "file",
+    "server"
+  ],
   "devDependencies": {
-    "eslint-config-prettier": "1.5.0",
+    "eslint-config-prettier": "1.6.0",
     "husky": "0.13.3",
     "lint-staged": "3.4.0",
     "prettier": "0.22.0",
     "xo": "0.18.1"
   },
   "dependencies": {
-    "args": "2.4.1",
+    "args": "2.4.2",
     "basic-auth": "1.1.0",
     "bluebird": "3.5.0",
     "boxen": "1.0.0",
     "chalk": "1.1.3",
-    "clipboardy": "1.0.2",
+    "clipboardy": "1.1.0",
     "dargs": "5.1.0",
     "detect-port": "1.1.1",
     "file-exists": "3.0.2",
@@ -64,13 +91,14 @@
     "fs-extra": "2.1.2",
     "fs-promise": "2.0.2",
     "handlebars": "4.0.6",
-    "ignore": "3.2.6",
+    "ignore": "3.2.7",
     "ip": "1.1.5",
-    "micro": "7.3.0",
+    "micro": "7.3.1",
     "micro-compress": "1.0.0",
     "mime-types": "2.1.15",
     "moment": "2.18.1",
     "node-version": "1.0.0",
+    "object-assign": "4.1.1",
     "path-type": "2.0.0",
     "send": "0.15.1",
     "underscore": "1.8.3",
