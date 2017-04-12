@@ -2,7 +2,7 @@
   "name": "html-pages",
   "title": "HTML Pages",
   "description": "Simple development http server for file serving and directory listing made by a Designer. Use it for hacking your HTML/JavaScript/CSS files, but not for deploying your final site.",
-  "version": "0.0.88",
+  "version": "0.0.89",
   "scripts": {
     "_precommit": "lint-staged",
     "js-style-linter": "xo",
@@ -11,6 +11,7 @@
   "files": [
     "bin",
     "lib",
+    "json",
     "public",
     "views",
     "LICENSE.md"
