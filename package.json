@@ -2,7 +2,7 @@
   "name": "html-pages",
   "title": "HTML Pages",
   "description": "Simple development http server for file serving and directory listing.",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "engines": {
     "node": ">=6.9.0"
   },
