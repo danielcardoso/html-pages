@@ -2,7 +2,7 @@
   "name": "html-pages",
   "title": "HTML Pages",
   "description": "Simple development http server for file serving and directory listing made by a Designer. Use it for hacking your HTML/JavaScript/CSS files, but not for deploying your final site.",
-  "version": "0.0.89",
+  "version": "0.0.90",
   "scripts": {
     "_precommit": "lint-staged",
     "js-style-linter": "xo",
@@ -25,10 +25,8 @@
   },
   "author": {
     "name": "Daniel Cardoso",
-    "github": {
-      "username": "@DanielCardoso",
-      "link": "http://www.github.com/danielcardoso"
-    }
+    "email" : "npm@danielcardoso.net",
+    "url" : "http://www.github.com/danielcardoso"
   },
   "homepage": "https://github.com/danielcardoso/html-pages#readme",
   "bugs": {
