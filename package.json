@@ -2,31 +2,28 @@
   "name": "html-pages",
   "title": "HTML Pages",
   "description": "Simple development http server for file serving and directory listing made by a Designer. Use it for hacking your HTML/JavaScript/CSS files, but not for deploying your final site.",
-  "version": "0.0.90",
-  "scripts": {
-    "_precommit": "lint-staged",
-    "js-style-linter": "xo",
-    "generate-example": "node ./lib/generate-files.js"
-  },
+  "version": "1.0.0",
   "files": [
     "bin",
     "lib",
     "json",
     "public",
     "views",
-    "LICENSE.md"
+    "LICENSE.md",
+    "README.md",
+    "package.json"
   ],
   "main": "./lib/api.js",
   "bin": {
     "html-pages": "./bin/index.js"
   },
   "engines": {
-    "node": ">=6.9.0"
+    "node": ">=6.6.0"
   },
   "author": {
     "name": "Daniel Cardoso",
-    "email" : "npm@danielcardoso.net",
-    "url" : "http://www.github.com/danielcardoso"
+    "email": "npm@danielcardoso.net",
+    "url": "http://www.github.com/danielcardoso"
   },
   "homepage": "https://github.com/danielcardoso/html-pages#readme",
   "bugs": {
@@ -36,19 +33,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/danielcardoso/html-pages.git"
-  },
-  "xo": {
-    "ignore": "public/**",
-    "no-semicolon": false,
-    "no-esnext": false,
-    "extends": "prettier"
-  },
-  "lint-staged": {
-    "*.js": [
-      "npm run js-style-linter",
-      "prettier --single-quote --write",
-      "git add"
-    ]
   },
   "keywords": [
     "now",
@@ -69,12 +53,29 @@
     "file",
     "server"
   ],
+  "scripts": {
+    "precommit": "lint-staged",
+    "js-style-linter": "semistandard --verbose | snazzy",
+    "generate-example": "node ./lib/generate-files.js"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run js-style-linter",
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "semistandard": {
+    "ignore": ["public/", "example/"],
+    "parser": "babel-eslint"
+  },
   "devDependencies": {
-    "eslint-config-prettier": "1.6.0",
+    "semistandard": "*",
+    "snazzy": "7.0.0",
+    "babel-eslint": "7.2.2",
     "husky": "0.13.3",
     "lint-staged": "3.4.0",
-    "prettier": "0.22.0",
-    "xo": "0.18.1"
+    "prettier": "0.22.0"
   },
   "dependencies": {
     "args": "2.4.2",
@@ -96,6 +97,7 @@
     "micro-compress": "1.0.0",
     "mime-types": "2.1.15",
     "moment": "2.18.1",
+    "node-notifier": "5.1.2",
     "node-version": "1.0.0",
     "object-assign": "4.1.1",
     "path-type": "2.0.0",

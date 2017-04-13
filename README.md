@@ -1,9 +1,9 @@
 <p align="center">
-  <a href="https://www.npmjs.com/package/html-pages">
-    <img src="https://raw.githubusercontent.com/danielcardoso/art/master/html-pages/logo-512.png" width="128">
+  <a align="center" href="https://www.npmjs.com/package/html-pages">
+    <img align="center" src="https://raw.githubusercontent.com/danielcardoso/art/master/html-pages/logo-512.png" width="220">
   </a>
 
-  <h3 align="center">HTML Pages</h3>
+  <h1 align="center">HTML Pages</h1>
 
   <p align="center">
     Simple development http server for file serving and directory listing made by a Designer. Use it for hacking your HTML/JavaScript/CSS files, but not for deploying your final site.
@@ -12,6 +12,7 @@
   </p>
 </p>
 <br>
+
 
 ## Table of contents
 - [Status](#status)
@@ -28,7 +29,7 @@
 [![npm module downloads per month](http://img.shields.io/npm/dm/html-pages.svg?style=flat-square)](https://www.npmjs.org/package/html-pages)
 [![dependency Status](https://img.shields.io/david/danielcardoso/html-pages.svg?style=flat-square)](https://david-dm.org/danielcardoso/html-pages)
 [![devDependency Status](https://img.shields.io/david/dev/danielcardoso/html-pages.svg?style=flat-square)](https://david-dm.org/danielcardoso/html-pages?type=dev)
-[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square)](https://github.com/sindresorhus/xo)
+[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
 
 
 ## Quick start
@@ -105,7 +106,7 @@ PAGES_USER=daniel PAGES_PASSWORD=1904 html-pages --auth
 * Enable HTTPS support;
 * Add web browser launching (use [opn](https://www.npmjs.com/package/opn) to allow opening more than one link in different browsers);
 * Add Proxy support;
-* Add Notifications ([node-notifier](https://www.npmjs.com/package/node-notif;ier));
+* Add Notifications ([node-notifier](https://www.npmjs.com/package/node-notifier));
 * Provide a /robots.txt (whose content defaults to `'User-agent: *\nDisallow: /'`);
 * Add default options file;
 * Improve HTML errors;

@@ -18,7 +18,6 @@ const _ = require('underscore');
 // eslint-disable-next-line no-unused-vars
 const assign = require('object-assign');
 
-
 // Ours
 const pkg = require('../package');
 const listening = require('../lib/listening');
@@ -26,9 +25,11 @@ const serverHandler = require('../lib/server');
 const ignore = require('../lib/ignore');
 
 // Throw an error if node version is too low
-if (nodeVersion.major < 6) {
+if (
+  nodeVersion.major < 6 || (nodeVersion.major === 6 && nodeVersion.minor < 6)
+) {
   console.error(
-    `${red('Error!')} ${pkg.title} requires at least version 6 of Node. Please upgrade!`
+    `${red('Error!')} ${pkg.title} requires at least version 6.6 of Node. Please upgrade!`
   );
   process.exit(1);
 }
@@ -41,27 +42,28 @@ if (process.env.NODE_ENV !== 'production' && pkg.dist) {
   }).notify();
 }
 
-const argsOptsFilePath = path.normalize(path.join(__dirname, '/../json/args.json'));
+const argsOptsFilePath = path.normalize(
+  path.join(__dirname, '/../json/args.json')
+);
 const jsonArgs = fs.readJsonSync(argsOptsFilePath);
 
 if (!_.isObject(jsonArgs.options)) {
-  console.error(
-    `${red('Error!')} Arguments file is not available!`
-  );
+  console.error(`${red('Error!')} Arguments file is not available!`);
   process.exit(1);
 }
 
 const argsBoolean = _.chain(jsonArgs.options)
-  .map((arg) => {
-    return (_.isBoolean(arg.isBoolean) && arg.isBoolean === true) ? arg.name : undefined;
+  .map(arg => {
+    return _.isBoolean(arg.isBoolean) && arg.isBoolean === true
+      ? arg.name
+      : undefined;
   })
-  .filter((arg) => {
+  .filter(arg => {
     return !_.isUndefined(arg);
   })
   .value();
 
-args
-  .options(jsonArgs.options);
+args.options(jsonArgs.options);
 
 const flags = args.parse(process.argv, {
   name: pkg.name,
@@ -74,7 +76,6 @@ const flags = args.parse(process.argv, {
   },
   mainColor: ['yellow', 'bold']
 });
-
 
 // eslint-disable-next-line capitalized-comments
 /*
