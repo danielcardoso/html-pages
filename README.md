@@ -14,7 +14,7 @@
 <br/>
 
 <p align="center">
-  <img align="center" src="https://raw.githubusercontent.com/danielcardoso/art/master/html-pages/listing.png" width="70%">
+  <img align="center" src="https://raw.githubusercontent.com/danielcardoso/art/master/html-pages/listing.png" width="90%">
 </p>
 <br/>
 <hr/>
