@@ -2,9 +2,10 @@
   "name": "html-pages",
   "title": "HTML Pages",
   "description": "Simple development http server for file serving and directory listing made by a Designer. Use it for hacking your HTML/JavaScript/CSS files, but not for deploying your final site.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "files": [
     "bin",
+    "example",
     "lib",
     "json",
     "public",
@@ -61,7 +62,6 @@
   "lint-staged": {
     "*.js": [
       "npm run js-style-linter",
-      "prettier --single-quote --write",
       "git add"
     ]
   },
@@ -74,8 +74,7 @@
     "snazzy": "7.0.0",
     "babel-eslint": "7.2.2",
     "husky": "0.13.3",
-    "lint-staged": "3.4.0",
-    "prettier": "0.22.0"
+    "lint-staged": "3.4.0"
   },
   "dependencies": {
     "args": "2.4.2",

@@ -132,7 +132,7 @@ if (flags.ignore && flags.ignore.length > 0) {
   ignoredFiles = ignoredFiles.concat(flags.ignore.split(','));
 }
 
-const handler = coroutine(function*(req, res) {
+const handler = coroutine(function * (req, res) {
   const ignorePattern = ignore(ignoredFiles);
 
   yield serverHandler(req, res, flags, current, ignorePattern);
@@ -155,7 +155,7 @@ detect(port).then(open => {
 
   server.listen(
     port,
-    coroutine(function*() {
+    coroutine(function * () {
       yield listening(server, current, inUse, flags.noClipboard !== true);
     })
   );

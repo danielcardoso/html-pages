@@ -16,7 +16,7 @@
       <nav>
         <ol class="breadcrumb custom-separator">
           {{#each project.paths}}
-            <li{{#if @last}} class="current"{{/if}}>
+            <li class="{{#if @last}}current{{/if}}">
             {{#if @last}}
               <span>{{{name}}}</span>
             {{else}}
@@ -50,9 +50,9 @@
             <tr class="parent">
               <td class="column-file-name">
                 <a href="/{{{project.parent.relative}}}" title="{{{project.parent.base}}} ({{{project.parent.title}}})">
-                  <!--span class="file-icon">
+                  <span class="file-icon">
                     <img class="file-type file-type--structure" src="{{{structure.assetDir}}}/images/{{{project.parent.iconPath}}}" alt="Icon [{{{project.parent.base}}}]">
-                  </span-->
+                  </span>
                   {{{project.parent.base}}}
                 </a>
               </td>
@@ -65,9 +65,9 @@
             <tr>
               <td class="column-file-name">
                 <a href="/{{{this.relative}}}" title="{{{this.title}}}">
-                  <!--span class="file-icon">
+                  <span class="file-icon">
                     <img class="file-type{{#if this.iconIsStructure}} file-type--structure{{/if}}" src="{{{../structure.assetDir}}}/images/{{{this.iconPath}}}" alt="Icon [{{{this.ext}}}]">
-                  </span-->
+                  </span>
                   {{{this.base}}}
                 </a>
               </td>

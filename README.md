@@ -3,7 +3,7 @@
     <img align="center" src="https://raw.githubusercontent.com/danielcardoso/art/master/html-pages/logo-512.png" width="220">
   </a>
 
-  <h1 align="center">HTML Pages</h1>
+  <h1 align="center" style="text-align: center;">HTML Pages</h1>
 
   <p align="center">
     Simple development http server for file serving and directory listing made by a Designer. Use it for hacking your HTML/JavaScript/CSS files, but not for deploying your final site.
@@ -11,7 +11,14 @@
     <a href="https://www.npmjs.com/package/html-pages"><strong>Visit HTML Pages &raquo;</strong></a>
   </p>
 </p>
-<br>
+<br/>
+
+<p align="center">
+  <img align="center" src="https://raw.githubusercontent.com/danielcardoso/art/master/html-pages/listing.png" width="70%">
+</p>
+<br/>
+<hr/>
+<br/>
 
 
 ## Table of contents
@@ -100,7 +107,6 @@ PAGES_USER=daniel PAGES_PASSWORD=1904 html-pages --auth
 
 ## What next?
 
-* Add icons with the file types to directory listing;
 * Add tests to package;
 * Display logs;
 * Enable HTTPS support;
@@ -114,7 +120,10 @@ PAGES_USER=daniel PAGES_PASSWORD=1904 html-pages --auth
 
 ## Version history
 
-* v0.1.0
+* v1.1.0
+  - Add icons with the file types to the directory listing;
+  - Add example files;
+* v1.0.0
   - Initial release
 
 
