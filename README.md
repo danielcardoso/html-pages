@@ -121,6 +121,9 @@ PAGES_USER=daniel PAGES_PASSWORD=1904 html-pages --auth
 
 ## Version history
 
+
+* v1.2.1
+  - Minor improvements
 * v1.2.0
   - Add web browser launching support:
     - it uses [opn](https://www.npmjs.com/package/opn) to allow opening links in different browsers;
