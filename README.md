@@ -80,10 +80,12 @@ html-pages help
 ```
 
 * `--auth` —                   Enables http-auth using the `PAGES_USER` and `PAGES_PASSWORD` environment variables (disabled by default)
+* `--browser=BROWSER` —        Specify browser to use instead of system default (Possible values: `chrome`, `firefox` and `safari`)
 * `--cache=SECONDS` —          Time in milliseconds for caching files in the browser (defaults to 3600)
 * `--cors` —                   Setup CORS headers to allow requests from any origin (disabled by default)
 * `--directoryIndex=FILENAME` — The index file of a directory. Set to false to always show the directory listing. (defaults to "index.html")
 * `--ignore=PATH` —            Comma-separated string of paths to ignore ([ignore](https://github.com/es128/anymatch) is a manager and filter which implemented in pure JavaScript according to the .gitignore spec)
+* `--noBrowser` —              Suppress automatic web browser launching
 * `--noCache` —                Disabled the caching files in the browser (disabled by default)
 * `--noClipboard` —            Don't copy address to clipboard (disabled by default)
 * `--noListing` —              Turn off the directory listings. (disabled by default)
@@ -110,7 +112,6 @@ PAGES_USER=daniel PAGES_PASSWORD=1904 html-pages --auth
 * Add tests to package;
 * Display logs;
 * Enable HTTPS support;
-* Add web browser launching (use [opn](https://www.npmjs.com/package/opn) to allow opening more than one link in different browsers);
 * Add Proxy support;
 * Add Notifications ([node-notifier](https://www.npmjs.com/package/node-notifier));
 * Provide a /robots.txt (whose content defaults to `'User-agent: *\nDisallow: /'`);
@@ -120,6 +121,9 @@ PAGES_USER=daniel PAGES_PASSWORD=1904 html-pages --auth
 
 ## Version history
 
+* v1.2.0
+  - Add web browser launching support:
+    - it uses [opn](https://www.npmjs.com/package/opn) to allow opening links in different browsers;
 * v1.1.0
   - Add icons with the file types to the directory listing;
   - Add example files;

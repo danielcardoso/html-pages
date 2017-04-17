@@ -22,7 +22,7 @@ const assign = require('object-assign');
 const pkg = require('../package');
 const listening = require('../lib/listening');
 const serverHandler = require('../lib/server');
-const ignore = require('../lib/ignore');
+const FuncionalUtils = require('../lib/funcional-utils');
 
 // Throw an error if node version is too low
 if (
@@ -132,10 +132,11 @@ if (flags.ignore && flags.ignore.length > 0) {
   ignoredFiles = ignoredFiles.concat(flags.ignore.split(','));
 }
 
-const handler = coroutine(function * (req, res) {
-  const ignorePattern = ignore(ignoredFiles);
+// Initialize utils functions
+const fu = FuncionalUtils(flags, ignoredFiles);
 
-  yield serverHandler(req, res, flags, current, ignorePattern);
+const handler = coroutine(function * (req, res) {
+  yield serverHandler(req, res, flags, current, fu);
 });
 
 const server = flags.unzipped ? micro(handler) : micro(compress(handler));
@@ -156,7 +157,7 @@ detect(port).then(open => {
   server.listen(
     port,
     coroutine(function * () {
-      yield listening(server, current, inUse, flags.noClipboard !== true);
+      yield listening(server, current, inUse, flags.noClipboard !== true, fu);
     })
   );
 });

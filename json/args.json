@@ -33,9 +33,15 @@
     },
 
 
-
-
-
+    {
+      "name": "noBrowser",
+      "description": "Suppress automatic web browser launching",
+      "isBoolean": true
+    },
+    {
+      "name": "browser",
+      "description": "Specify browser to use instead of system default"
+    },
 
 
     {
