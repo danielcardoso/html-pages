@@ -117,6 +117,7 @@ PAGES_USER=daniel PAGES_PASSWORD=1904 html-pages --auth
 * Provide a /robots.txt (whose content defaults to `'User-agent: *\nDisallow: /'`);
 * Add default options file;
 * Improve HTML errors;
+* Add grid layout;
 
 
 ## Version history
