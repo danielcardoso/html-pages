@@ -2,7 +2,7 @@
   "name": "html-pages",
   "title": "HTML Pages",
   "description": "Simple development http server for file serving and directory listing made by a Designer. Use it for hacking your HTML/JavaScript/CSS files, but not for deploying your final site.",
-  "version": "1.2.1",
+  "version": "1.5.0",
   "files": [
     "bin",
     "example",
@@ -56,10 +56,10 @@
   ],
   "scripts": {
     "precommit": "lint-staged",
+    "enable-auth": "PAGES_USER=daniel PAGES_PASSWORD=1904",
     "js-lint": "semistandard --verbose | snazzy",
     "generate-example": "node ./lib/generate-files.js",
-    "test": "npm run enable-auth && mocha test/test-*.js",
-    "enable-auth": "PAGES_USER=daniel PAGES_PASSWORD=1904"
+    "test": "npm run enable-auth && mocha test/test-*.js && npm run js-lint"
   },
   "lint-staged": {
     "*.js": [
@@ -67,6 +67,7 @@
       "git add"
     ]
   },
+  "preferGlobal": true,
   "semistandard": {
     "ignore": ["public/", "example/"],
     "env": ["mocha"],
@@ -78,7 +79,6 @@
     "babel-eslint": "7.2.3",
     "husky": "0.13.3",
     "lint-staged": "3.4.0",
-
     "sleep": "latest",
     "express": "4.15.2",
     "mocha": "3.2.0",
