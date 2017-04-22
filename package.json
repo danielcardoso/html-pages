@@ -73,9 +73,9 @@
     "parser": "babel-eslint"
   },
   "devDependencies": {
-    "semistandard": "*",
+    "semistandard": "latest",
     "snazzy": "7.0.0",
-    "babel-eslint": "7.2.2",
+    "babel-eslint": "7.2.3",
     "husky": "0.13.3",
     "lint-staged": "3.4.0",
 
@@ -92,7 +92,7 @@
     "camelcase-keys": "4.1.0",
     "chalk": "1.1.3",
     "clipboardy": "1.1.0",
-    "command-line-args": "4.0.2",
+    "command-line-args": "4.0.3",
     "command-line-usage": "4.0.0",
     "cors": "latest",
     "dargs": "5.1.0",
