@@ -5,29 +5,27 @@ const path = require('path');
 
 // Packages
 const micro = require('micro');
-const args = require('args');
-const fs = require('fs-extra');
 const compress = require('micro-compress');
 const detect = require('detect-port');
 const { coroutine } = require('bluebird');
 const updateNotifier = require('update-notifier');
 const { red } = require('chalk');
 const nodeVersion = require('node-version');
-const _ = require('underscore');
-
-// eslint-disable-next-line no-unused-vars
-const assign = require('object-assign');
 
 // Ours
 const pkg = require('../package');
 const listening = require('../lib/listening');
 const serverHandler = require('../lib/server');
-const FuncionalUtils = require('../lib/funcional-utils');
+const FunctionalUtils = require('../lib/functional-utils');
+const ParseCommandLineArgs = require('../lib/parse-command-line-args');
+
+let HtmlPages = {
+  server: null,
+  logLevel: 2
+};
 
 // Throw an error if node version is too low
-if (
-  nodeVersion.major < 6 || (nodeVersion.major === 6 && nodeVersion.minor < 6)
-) {
+if (nodeVersion.major < 6 || (nodeVersion.major === 6 && nodeVersion.minor < 6)) {
   console.error(
     `${red('Error!')} ${pkg.title} requires at least version 6.6 of Node. Please upgrade!`
   );
@@ -42,82 +40,11 @@ if (process.env.NODE_ENV !== 'production' && pkg.dist) {
   }).notify();
 }
 
-const argsOptsFilePath = path.normalize(
-  path.join(__dirname, '/../json/args.json')
-);
-const jsonArgs = fs.readJsonSync(argsOptsFilePath);
+const flags = ParseCommandLineArgs();
 
-if (!_.isObject(jsonArgs.options)) {
-  console.error(`${red('Error!')} Arguments file is not available!`);
-  process.exit(1);
-}
+const directory = flags.root;
 
-const argsBoolean = _.chain(jsonArgs.options)
-  .map(arg => {
-    return _.isBoolean(arg.isBoolean) && arg.isBoolean === true
-      ? arg.name
-      : undefined;
-  })
-  .filter(arg => {
-    return !_.isUndefined(arg);
-  })
-  .value();
-
-args.options(jsonArgs.options);
-
-const flags = args.parse(process.argv, {
-  name: pkg.name,
-  help: true,
-  version: true,
-  minimist: {
-    stopEarly: false,
-    alias: {},
-    boolean: argsBoolean
-  },
-  mainColor: ['yellow', 'bold']
-});
-
-// eslint-disable-next-line capitalized-comments
-/*
-const userHomeDir = process.env[(process.platform === 'win32') ? 'USERPROFILE' : 'HOME'];
-const userConfigPath = path.join(userHomeDir, '.html-pages.json');
-
-let userConfig = {};
-if (fs.existsSync(userConfigPath)) {
-  try {
-    userConfig = fs.readJsonSync(userConfigPath);
-  } catch (err) {
-    console.error(
-      `${red('Error!')} ${err}`
-    );
-    process.exit(1);
-  }
-
-  if (!_.isObject(userConfig)) {
-    console.error(
-      `${red('Error!')} The .html-pages.json is defined but the content isn't an object. Please check if!`
-    );
-    process.exit(1);
-  }
-}
-*/
-
-// Validate options
-if (flags.directoryIndex.toLowerCase() === 'false') {
-  flags.directoryIndex = false;
-}
-if (flags.cache === 0) {
-  flags.noCache = true;
-}
-
-const directory = args.sub[0];
-
-// Don't log anything to the console if silent mode is enabled
-if (flags.silent) {
-  console.log = () => {};
-}
-
-process.env.ASSET_DIR = '/' + Math.random().toString(36).substr(2, 10);
+process.env.ASSET_DIR = '/' + Math.random().toString(36).substr(2, 11);
 
 let current = process.cwd();
 
@@ -129,21 +56,31 @@ if (directory) {
 let ignoredFiles = ['.DS_Store', '._.DS_Store'];
 
 if (flags.ignore && flags.ignore.length > 0) {
-  ignoredFiles = ignoredFiles.concat(flags.ignore.split(','));
+  ignoredFiles = ignoredFiles.concat(flags.ignore);
 }
 
 // Initialize utils functions
-const fu = FuncionalUtils(flags, ignoredFiles);
+const fu = FunctionalUtils(flags, ignoredFiles);
 
 const handler = coroutine(function * (req, res) {
   yield serverHandler(req, res, flags, current, fu);
 });
 
-const server = flags.unzipped ? micro(handler) : micro(compress(handler));
+HtmlPages.server = flags.unzipped ? micro(handler) : micro(compress(handler));
 let port = flags.port;
 
 detect(port).then(open => {
   let inUse = open !== port;
+
+  if (inUse && flags.noPortScan === true) {
+    console.error(
+      red(
+        'The port `' + port + '` is already in use.'
+      )
+    );
+
+    process.exit(500);
+  }
 
   if (inUse) {
     port = open;
@@ -154,10 +91,18 @@ detect(port).then(open => {
     };
   }
 
-  server.listen(
+  HtmlPages.server.listen(
     port,
     coroutine(function * () {
-      yield listening(server, current, inUse, flags.noClipboard !== true, fu);
+      yield listening(HtmlPages.server, current, inUse, flags.noClipboard !== true, fu);
     })
   );
+
+  if (flags.dryTest === true) {
+    setTimeout(function () {
+      process.emit('kill');
+    }, 1000);
+  }
 });
+
+module.exports = HtmlPages;

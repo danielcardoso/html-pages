@@ -2,78 +2,148 @@
   "options": [
     {
       "name": "port",
+      "alias": "p",
       "description": "Port to listen on",
       "defaultValue": 8084,
-      "validations": "isNumber"
+      "type": "Number",
+      "typeLabel": "number",
+      "validations": "isNumber",
+      "show": true
+    },
+    {
+      "name": "root",
+      "alias": "r",
+      "description": "The root directory",
+      "type": "String",
+      "defaultValue": "./",
+      "defaultOption": true,
+      "multiple": true
     },
     {
       "name": "cache",
+      "alias": "c",
       "description": "Time in milliseconds for caching files in the browser",
       "defaultValue": 3600,
-      "validations": "isNumber"
+      "type": "Number",
+      "typeLabel": "number",
+      "validations": "isNumber",
+      "show": true
     },
     {
-      "name": "noCache",
-      "description": "Disabled the caching files in the browser"
+      "name": "no-cache",
+      "description": "Disabled the caching files in the browser",
+      "type": "Boolean",
+      "show": true
+    },
+    {
+      "name": "no-port-scan",
+      "description": "Disabled the port scaning when the selected port is already in use",
+      "type": "Boolean",
+      "show": true
     },
     {
       "name": "cors",
-      "description": "Setup CORS headers to allow requests from any origin"
+      "alias": "C",
+      "description": "Setup CORS headers to allow requests from any origin",
+      "type": "Boolean",
+      "show": true
     },
     {
-      "name": "directoryIndex",
-      "description": "The index file of a directory. Set to false to always show the directory listing.",
+      "name": "directory-index",
+      "alias": "d",
+      "description": "The index file of a directory. Set to false to always show the directory listing",
       "defaultValue": "index.html",
-      "validations": "isFileName"
+      "type": "String",
+      "typeLabel": "file",
+      "validations": "isFileName",
+      "show": true
     },
     {
-      "name": "noListing",
-      "description": "Turn off the directory listings.",
-      "isBoolean": true
+      "name": "no-listing",
+      "description": "Turn off the directory listings",
+      "type": "Boolean",
+      "show": true
     },
-
-
     {
-      "name": "noBrowser",
+      "name": "no-browser",
       "description": "Suppress automatic web browser launching",
-      "isBoolean": true
+      "type": "Boolean",
+      "show": true
+    },
+    {
+      "name": "no-notifications",
+      "description": "Suppress automatic notifications launching",
+      "type": "Boolean",
+      "show": true
     },
     {
       "name": "browser",
-      "description": "Specify browser to use instead of system default"
+      "alias": "b",
+      "description": "Specify browser to use instead of system default",
+      "type": "String",
+      "typeLabel": "string",
+      "show": true
     },
 
 
     {
       "name": "auth",
+      "alias": "a",
       "description": "Enables http-auth using the `PAGES_USER` and `PAGES_PASSWORD` environment variables",
-      "isBoolean": true
+      "type": "Boolean",
+      "show": true
     },
     {
       "name": "unzipped",
+      "alias": "u",
       "description": "Disable GZIP compression",
-      "isBoolean": true
+      "type": "Boolean",
+      "show": true
     },
     {
-      "name": "noClipboard",
+      "name": "no-clipboard",
       "description": "Don't copy address to clipboard",
-      "isBoolean": true
+      "type": "Boolean",
+      "show": true
     },
     {
       "name": "silent",
+      "alias": "s",
       "description": "Don't log anything to the console",
-      "isBoolean": true
+      "type": "Boolean",
+      "show": true
     },
-
-
-
 
 
 
 
     {
       "name": "ignore",
-      "description": "Files and directories to ignore"
+      "alias": "i",
+      "description": "Files and directories to ignore",
+      "show": true
+    },
+
+
+    {
+      "name": "help",
+      "alias": "h",
+      "description": "Output usage information",
+      "type": "Boolean",
+      "show": true
+    },
+    {
+      "name": "version",
+      "alias": "v",
+      "description": "Output the version number",
+      "type": "Boolean",
+      "show": true
+    },
+    {
+      "name": "dry-test",
+      "description": "",
+      "type": "Boolean",
+      "show": false
     }
 
   ]
