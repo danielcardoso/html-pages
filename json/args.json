@@ -37,7 +37,7 @@
     },
     {
       "name": "no-port-scan",
-      "description": "Disabled the port scaning when the selected port is already in use",
+      "description": "Disabled the port scanning when the selected port is already in use",
       "type": "Boolean",
       "show": true
     },

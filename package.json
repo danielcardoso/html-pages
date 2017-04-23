@@ -79,7 +79,6 @@
     "babel-eslint": "7.2.3",
     "husky": "0.13.3",
     "lint-staged": "3.4.0",
-    "sleep": "latest",
     "express": "4.15.2",
     "mocha": "3.2.0",
     "mocha-logger": "1.0.5",

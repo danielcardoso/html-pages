@@ -3,7 +3,7 @@ const path = require('path');
 
 // Packages
 const mlog = require('mocha-logger');
-const sleep = require('sleep');
+// const sleepms = require('sleep-ms');
 const _ = require('lodash');
 
 const options = {
@@ -24,9 +24,6 @@ const startServer = (opts = {}, dirname) => {
 
   const htmlPages = require('../lib/api')(dirname, opts);
   const httpHost = 'http://localhost:' + htmlPages.options.port;
-
-  // Sleep 2,5 seconds to start the server
-  sleep.msleep(2500);
 
   return {
     htmlPages,

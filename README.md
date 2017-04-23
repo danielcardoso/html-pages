@@ -79,24 +79,24 @@ Run this command to see a list of all available options:
 html-pages help
 ```
 
-* `-a, --auth`                     —  Enables http-auth using the `PAGES_USER` and `PAGES_PASSWORD` environment variables
-* `-b, --browser`  *string*        —  Specify browser to use instead of system default
-* `-c, --cache`  *number*          —  Time in milliseconds for caching files in the browser (defaults to 3600)
-* `-C, --cors`                     —  Setup CORS headers to allow requests from any origin
-* `-d, --directory-index`  *file*  —  The index file of a directory. Set to empty `""` to always show the directory listing (defaults to index.html)
-* `-h, --help`                     —  Output usage information
-* `-i, --ignore`  *string*         —  Files and directories to ignore
-* `--no-browser`                   —  Suppress automatic web browser launching
-* `--no-cache`                     —  Disabled the caching files in the browser
-* `--no-clipboard`                 —  Don't copy address to clipboard
-* `--no-listing`                   —  Turn off the directory listings
-* `--no-notifications`             —  Suppress automatic notifications launching
-* `--no-port-scan`                 —  Disabled the port scaning when the selected port is already in use
-* `-p, --port`  *number*           —  Port to listen on (defaults to 8084)
-* `-r, --root`  *string*           —  The root directory (defaults to ./)
-* `-s, --silent`                   —  Don't log anything to the console
-* `-u, --unzipped`                 —  Disable GZIP compression
-* `-v, --version`                  —  Output the version number
+* `-a, --auth`                       —  Enables http-auth using the `PAGES_USER` and `PAGES_PASSWORD` environment variables
+* `-b, --browser`  *<string>*        —  Specify browser to use instead of system default
+* `-c, --cache`  *<number>*          —  Time in milliseconds for caching files in the browser (defaults to 3600)
+* `-C, --cors`                       —  Setup CORS headers to allow requests from any origin
+* `-d, --directory-index`  *<file>*  —  The index file of a directory. Set to empty `""` to always show the directory listing (defaults to index.html)
+* `-h, --help`                       —  Output usage information
+* `-i, --ignore`  *<string>*         —  Files and directories to ignore
+* `--no-browser`                     —  Suppress automatic web browser launching
+* `--no-cache`                       —  Disabled the caching files in the browser
+* `--no-clipboard`                   —  Don't copy address to clipboard
+* `--no-listing`                     —  Turn off the directory listings
+* `--no-notifications`               —  Suppress automatic notifications launching
+* `--no-port-scan`                   —  Disabled the port scanning when the selected port is already in use
+* `-p, --port`  *<number>*           —  Port to listen on (defaults to 8084)
+* `-r, --root`  *<string>*           —  The root directory (defaults to ./)
+* `-s, --silent`                     —  Don't log anything to the console
+* `-u, --unzipped`                   —  Disable GZIP compression
+* `-v, --version`                    —  Output the version number
 
 
 

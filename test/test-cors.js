@@ -1,7 +1,6 @@
 // Packages
 const assert = require('assert');
 const request = require('supertest');
-const sleep = require('sleep');
 
 // Ours
 const serverCaller = require('./initServer');
@@ -18,7 +17,6 @@ describe('cors tests', function () {
   afterEach(function () {
     // mlog.log('End test\n');
     htmlPages.stop();
-    sleep.msleep(150);
   });
 
   after(function () {
