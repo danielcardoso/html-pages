@@ -34,9 +34,11 @@
 
 [![npm version](https://img.shields.io/npm/v/html-pages.svg?style=flat-square)](https://www.npmjs.com/package/html-pages)
 [![npm module downloads per month](http://img.shields.io/npm/dm/html-pages.svg?style=flat-square)](https://www.npmjs.org/package/html-pages)
+[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
+[![Linux and Mac Build Status](https://img.shields.io/travis/danielcardoso/html-pages/master.svg?style=flat-square&label=Linux%20%26%20Mac%20Build)](https://travis-ci.org/danielcardoso/html-pages)
+[![Windows Build Status](https://img.shields.io/appveyor/ci/danielcardoso/html-pages/master.svg?style=flat-square&label=Windows%20Build)](https://ci.appveyor.com/project/danielcardoso/html-pages)
 [![dependency Status](https://img.shields.io/david/danielcardoso/html-pages.svg?style=flat-square)](https://david-dm.org/danielcardoso/html-pages)
 [![devDependency Status](https://img.shields.io/david/dev/danielcardoso/html-pages.svg?style=flat-square)](https://david-dm.org/danielcardoso/html-pages?type=dev)
-[![JavaScript Style Guide](https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg?style=flat-square)](https://github.com/Flet/semistandard)
 
 
 ## Quick start
