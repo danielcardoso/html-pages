@@ -3,8 +3,8 @@ const path = require('path');
 
 // Packages
 const mlog = require('mocha-logger');
-// const sleepms = require('sleep-ms');
 const _ = require('lodash');
+const sleep = require('thread-sleep');
 
 const options = {
   port: 8888,
@@ -24,6 +24,8 @@ const startServer = (opts = {}, dirname) => {
 
   const htmlPages = require('../lib/api')(dirname, opts);
   const httpHost = 'http://localhost:' + htmlPages.options.port;
+
+  sleep(2000);
 
   return {
     htmlPages,

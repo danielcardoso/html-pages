@@ -113,6 +113,7 @@
     "opn": "4.0.2",
     "path-type": "2.0.0",
     "send": "0.15.1",
+    "thread-sleep": "2.0.0",
     "update-notifier": "2.1.0"
   }
 }
