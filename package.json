@@ -56,10 +56,9 @@
   ],
   "scripts": {
     "precommit": "lint-staged",
-    "enable-auth": "PAGES_USER=daniel PAGES_PASSWORD=1904",
     "js-lint": "semistandard --verbose | snazzy",
     "generate-example": "node ./lib/generate-files.js",
-    "test": "npm run enable-auth && mocha test/test-*.js && npm run js-lint"
+    "test": "mocha test/test-*.js && npm run js-lint"
   },
   "lint-staged": {
     "*.js": [

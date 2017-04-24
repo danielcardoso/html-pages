@@ -1,9 +1,33 @@
+environment:
+  matrix:
+    - nodejs_version: "6"
+    - nodejs_version: "7"
+
 platform:
+  - x86
   - x64
 
-build: off
+# branches to build
+branches:
+  # whitelist
+  only:
+    - master
 
+# Install scripts. (runs after repo cloning)
+install:
+  # Get the latest stable version of Node.js or io.js
+  - ps: Install-Product node $env:nodejs_version $env:platform
+  # install modules
+  - npm install
+
+# Post-install test scripts.
 test_script:
+  - set PATH=node_modules\.bin;%APPDATA%\npm;%PATH%
+  # Output useful info for debugging.
   - node --version
   - npm --version
+  # run tests
   - npm test
+
+# Don't actually build.
+build: off
