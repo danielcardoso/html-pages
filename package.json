@@ -2,12 +2,12 @@
   "name": "html-pages",
   "title": "HTML Pages",
   "description": "Simple development http server for file serving and directory listing made by a Designer. Use it for hacking your HTML/JavaScript/CSS files, but not for deploying your final site.",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "files": [
     "bin",
     "example",
-    "lib",
     "json",
+    "lib",
     "public",
     "views",
     "LICENSE.md",
@@ -36,9 +36,8 @@
     "url": "https://github.com/danielcardoso/html-pages.git"
   },
   "keywords": [
-    "now",
-    "http-server",
     "html",
+    "http-server",
     "front-end",
     "development",
     "tool",
@@ -47,6 +46,7 @@
     "dev",
     "web",
     "tool",
+    "now",
     "cors",
     "mime",
     "rest",

@@ -50,7 +50,7 @@ In addition, it's also awesome because it comes to serving static sites. If a di
 
 Another huge reason to use this package is that AJAX requests don't work with the `file://` protocol due to security restrictions, i.e. you need a server if your site fetches content through JavaScript.
 
-#### Installation:
+#### Installation
 
 You need to have node.js (`>v.6.6.0`) and npm installed. You should probably install this globally.
 
@@ -74,40 +74,38 @@ npm install -g # Install globally
 
 You just have to call the command `html-pages` in your project's directory. Alternatively you can add the path to be a command line parameter.
 
-#### Command line parameters:
+#### Command line parameters
 
 Run this command to see a list of all available options:
 
 ```bash
-html-pages help
+html-pages --help
 ```
 
-* `-a, --auth`                       —  Enables http-auth using the `PAGES_USER` and `PAGES_PASSWORD` environment variables
-* `-b, --browser`  *<string>*        —  Specify browser to use instead of system default
-* `-c, --cache`  *<number>*          —  Time in milliseconds for caching files in the browser (defaults to 3600)
-* `-C, --cors`                       —  Setup CORS headers to allow requests from any origin
-* `-d, --directory-index`  *<file>*  —  The index file of a directory. Set to empty `""` to always show the directory listing (defaults to index.html)
-* `-h, --help`                       —  Output usage information
-* `-i, --ignore`  *<string>*         —  Files and directories to ignore
-* `--no-browser`                     —  Suppress automatic web browser launching
-* `--no-cache`                       —  Disabled the caching files in the browser
-* `--no-clipboard`                   —  Don't copy address to clipboard
-* `--no-listing`                     —  Turn off the directory listings
-* `--no-notifications`               —  Suppress automatic notifications launching
-* `--no-port-scan`                   —  Disabled the port scanning when the selected port is already in use
-* `-p, --port`  *<number>*           —  Port to listen on (defaults to 8084)
-* `-r, --root`  *<string>*           —  The root directory (defaults to ./)
-* `-s, --silent`                     —  Don't log anything to the console
-* `-u, --unzipped`                   —  Disable GZIP compression
-* `-v, --version`                    —  Output the version number
+###### Options
 
+* `-a, --auth`                         —  Enables http-auth using the `PAGES_USER` and `PAGES_PASSWORD` environment variables
+* `-b, --browser`  *string*          —  Specify browser to use instead of system default
+* `-c, --cache`  *number*            —  Time in milliseconds for caching files in the browser (defaults to 3600)
+* `-C, --cors`                         —  Setup CORS headers to allow requests from any origin
+* `-d, --directory-index`  *file*    —  The index file of a directory. Set to empty `""` to always show the directory listing (defaults to index.html)
+* `-h, --help`                         —  Output usage information
+* `-i, --ignore`  *string/array*   —  Files and directories to ignore. Use a string (comma-separated string for paths to ignore) if your are using the command line and an array if you are calling it via API
+* `--no-browser`                       —  Suppress automatic web browser launching
+* `--no-cache`                         —  Disabled the caching files in the browser
+* `--no-clipboard`                     —  Don't copy address to clipboard
+* `--no-listing`                       —  Turn off the directory listings
+* `--no-notifications`                 —  Suppress automatic notifications launching
+* `--no-port-scan`                     —  Disabled the port scanning when the selected port is already in use
+* `-p, --port`  *number*             —  Port to listen on (defaults to 8084)
+* `-r, --root`  *string*             —  The root directory (defaults to ./)
+* `-s, --silent`                       —  Don't log anything to the console
+* `-u, --unzipped`                     —  Disable GZIP compression
+* `-v, --version`                      —  Output the version number
 
+Default options:
 
-
-
-
-
-
+If a file `~/.html-pages.json` exists it will be loaded and used as default options for html-pages on the command line. See [Options](#options) for option names.
 
 
 #### Authentication
@@ -121,22 +119,54 @@ PAGES_USER=daniel PAGES_PASSWORD=1904 html-pages --auth
 ```
 
 
+## Usage from node
+
+You can also use the package inside your application. Just load it:
+
+```js
+const pages = require('html-pages')
+```
+
+And call it with flags (check [Command line parameters](#command-line-parameters) for the full list):
+
+```js
+const pagesServer = pages(__dirname, {
+  port: 1904,
+  'directory-index': '',
+  '--no-clipboard': true,
+  ignore: ['.git', 'node_modules']
+})
+```
+
+To stop the server just use the method:
+
+```js
+pagesServer.stop()
+```
+
 ## What next?
 
-* Add tests to package;
 * Display logs;
 * Enable HTTPS support;
 * Add Proxy support;
-* Add Notifications ([node-notifier](https://www.npmjs.com/package/node-notifier));
 * Provide a /robots.txt (whose content defaults to `'User-agent: *\nDisallow: /'`);
-* Add default options file;
 * Improve HTML errors;
 * Add grid layout;
 
 
 ## Version history
 
-
+* v1.5.1
+  - Minor improvements
+* v1.5.0
+  - Using Travis CI (Linux and Mac Build Status)
+  - Using AppVeyor (Windows Build Status)
+  - CORS support
+  - Load initial settings from `~/.html-pages.json` if exists
+* v1.4.0
+  - Update dependencies
+* v1.3.0
+  - Code Refactoring
 * v1.2.1
   - Minor improvements
 * v1.2.0
