@@ -2,7 +2,7 @@
   "name": "html-pages",
   "title": "HTML Pages",
   "description": "Simple development http server for file serving and directory listing made by a Designer. Use it for hacking your HTML/JavaScript/CSS files, but not for deploying your final site.",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "files": [
     "bin",
     "example",
@@ -78,7 +78,7 @@
     "babel-eslint": "7.2.3",
     "husky": "0.13.3",
     "lint-staged": "3.4.0",
-    "express": "4.15.2",
+    "urllib-sync": "1.1.3",
     "mocha": "3.3.0",
     "mocha-logger": "1.0.5",
     "supertest": "3.0.0"

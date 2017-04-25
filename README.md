@@ -133,7 +133,7 @@ And call it with flags (check [Command line parameters](#command-line-parameters
 const pagesServer = pages(__dirname, {
   port: 1904,
   'directory-index': '',
-  '--no-clipboard': true,
+  'no-clipboard': true,
   ignore: ['.git', 'node_modules']
 })
 ```
@@ -156,22 +156,21 @@ pagesServer.stop()
 
 ## Version history
 
-* v1.5.1
-  - Minor improvements
 * v1.5.0
   - Using Travis CI (Linux and Mac Build Status)
   - Using AppVeyor (Windows Build Status)
   - CORS support
   - Load initial settings from `~/.html-pages.json` if exists
+  - Minor improvements
+  - Improve tests
 * v1.4.0
   - Update dependencies
 * v1.3.0
   - Code Refactoring
-* v1.2.1
-  - Minor improvements
 * v1.2.0
   - Add web browser launching support:
     - it uses [opn](https://www.npmjs.com/package/opn) to allow opening links in different browsers;
+  - Minor improvements
 * v1.1.0
   - Add icons with the file types to the directory listing;
   - Add example files;
