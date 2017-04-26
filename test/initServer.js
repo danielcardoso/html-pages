@@ -8,12 +8,12 @@ const sleep = require('thread-sleep');
 const request = require('urllib-sync').request;
 
 const options = {
-  port: 8888,
-  'no-browser': true,
-  'no-clipboard': true,
-  'no-notifications': true,
+  // 'no-browser': true,
+  // 'no-clipboard': true,
+  // 'no-notifications': true,
   'no-port-scan': true,
-  silent: true
+  silent: true,
+  port: 8888
 };
 
 const httpHost = 'http://localhost:' + options.port;
