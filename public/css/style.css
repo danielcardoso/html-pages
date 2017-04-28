@@ -31,7 +31,7 @@ body {
     padding: 20px;
     font-size: 14px;
     font-weight: 400;
-    line-height: 2em;
+    line-height: normal;
     -webkit-backface-visibility: hidden;
     position: relative;
     -webkit-text-size-adjust: 100%;
@@ -67,7 +67,7 @@ Basic Style
 
 
 /*------------------------------------*\
-    Wrapper
+    Error Wrapper
 \*------------------------------------*/
 
 .error-page {
@@ -96,51 +96,86 @@ Basic Style
     margin-bottom: -10px;
     padding-top: 3rem;
     padding-bottom: 3rem;
-
-    border: 10px solid #fff;
     text-align: center;
-
-    color: #fff;
-
-    background: rgb(54, 186, 194);
-    background: linear-gradient(-45deg, rgb(60, 211, 173), rgb(54, 186, 194));
+    color: #2c2c2c;
+    background: #fafafa;
 }
 
 .error-page h1 {
-    margin-top: 24px;
-    margin-bottom: 24px;
-
-    font-size: 48px;
-    font-size: 3.2rem;
+    margin: 0;
+    font-size: 90px;
+    line-height: 90px;
+    font-weight: 900;
 }
 
 .error-page h2 {
-    margin-top: 24px;
-    margin-bottom: 100px;
+    margin: 20px 0;
+    font-size: 28px;
+    line-height: 40px;
+}
 
-    font-size: 32px;
-    font-size: 1.0rem;
-    position: relative;
+.error-page p {
+    margin: 0;
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 0.01em;
+    line-height: 22px;
+    margin: 0 0 10px 0;
+    font-style: normal;
+    white-space: normal;
+    color: #626262;
 }
 
 .light-typo {
     font-weight: 200;
 }
 
-
-.error-page h2:after {
-    content: "";
-    display: block;
-    width: 74px;
-    height: 65px;
-    position: absolute;
-    top: 90px;
-    top: 3.4rem;
-    left: 50%;
-    margin-left: -37px;
-
-    background: transparent url("../images/structure/404-alert.png") center center no-repeat;
+.error-page .page {
+    margin-top: -40px;
 }
+
+.error-page .error__footer {
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    transform: translatey(-100%);
+}
+
+.error-page .error__footer-inner {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 350px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.error-page .error__footer-inner > div {
+    padding: 0 5px;
+}
+
+.error-page .error__footer-logo {
+
+}
+
+.error-page .error__footer-logo img {
+    display: block;
+    border: 1px solid #bbb;
+    background: #fff;
+    padding: 4px;
+    box-sizing: content-box;
+    border-radius: 8px;
+}
+
+.error-page .error__footer-description {
+    font-size: 12px;
+    line-height: 1.45em;
+}
+
 
 
 /*------------------------------------*\

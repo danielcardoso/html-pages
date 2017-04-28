@@ -44,13 +44,14 @@ const flags = ParseCommandLineArgs();
 
 const directory = flags.root;
 
-process.env.ASSET_DIR = '/' + Math.random().toString(36).substr(2, 11);
-
 let current = process.cwd();
 
 if (directory) {
   current = path.resolve(process.cwd(), directory);
 }
+
+process.env.CURRENT_PATH = current;
+process.env.ASSET_DIR = path.normalize('/@' + pkg.name + '-internal-files-' + Math.random().toString(36).substr(2, 16));
 
 // Ignore MacOSx files
 let ignoredFiles = ['.DS_Store', '._.DS_Store'];

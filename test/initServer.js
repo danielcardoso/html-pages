@@ -8,7 +8,6 @@ const sleep = require('thread-sleep');
 const request = require('urllib-sync').request;
 
 const options = {
-  // 'no-browser': true,
   // 'no-clipboard': true,
   // 'no-notifications': true,
   'no-port-scan': true,

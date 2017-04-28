@@ -59,14 +59,15 @@
       "show": true
     },
     {
-      "name": "no-listing",
-      "description": "Turn off the directory listings",
+      "name": "open",
+      "alias": "o",
+      "description": "Open browser window after starting the server",
       "type": "Boolean",
       "show": true
     },
     {
-      "name": "no-browser",
-      "description": "Suppress automatic web browser launching",
+      "name": "no-listing",
+      "description": "Turn off the directory listings",
       "type": "Boolean",
       "show": true
     },

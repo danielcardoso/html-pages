@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>{{{error.code}}} » {{{structure.name}}}</title>
+  <meta name="description" content="{{{structure.description}}}">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="{{{structure.assetDir}}}/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="{{{structure.assetDir}}}/images/logo.svg">
+</head>
+
+<body class="error-page">
+  <section class="vertical-aligned">
+    <div class="section-content">
+      <div class="page">
+        <h1>{{{error.code}}}</h1>
+        <h2 class="light-typo">{{{error.msg}}}</h2>
+        <p>{{{error.info}}}</p>
+      </div>
+    </div>
+  </section>
+  <div class="error__footer">
+    <div class="error__footer-inner">
+      <div class="error__footer-logo">
+        <img alt="{{{structure.name}}}" src="{{{structure.assetDir}}}/images/logo.svg" width="32">
+      </div>
+      {{#if structure.description}}
+      <div class="error__footer-description">
+        {{{structure.description}}} <i>— <a href="{{{structure.link}}}" target="_blank">GitHub</a></i>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+</body>
+
+</html>

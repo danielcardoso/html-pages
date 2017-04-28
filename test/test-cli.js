@@ -9,7 +9,6 @@ const pkg = require('../package');
 const cmd = path.join(__dirname, '..', 'bin', 'index.js');
 
 function executeTest (args, callback) {
-  args.push('--no-browser');
   args.push('--no-clipboard');
   args.push('--dry-test');
 
