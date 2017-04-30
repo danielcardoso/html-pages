@@ -8,20 +8,20 @@ skip_tags: true
 # Start builds on tags only (GitHub and BitBucket)
 skip_non_tags: true
 
+# environment variables
 environment:
   global:
-    - SNYK_TOKEN:4d950846-8786-402e-845d-2fc86442fba9
-    - PAGES_USER:html-pages
-    - PAGES_PASSWORD:1904
+    SNYK_TOKEN: 4d950846-8786-402e-845d-2fc86442fba9
+    PAGES_USER: html-pages
+    PAGES_PASSWORD: 1904
   matrix:
     - nodejs_version: "6"
     - nodejs_version: "7"
 
 # build platform, i.e. x86, x64, Any CPU. This setting is optional.
-platform: Any CPU
-
-# Maximum number of concurrent jobs for the project
-max_jobs: 1
+platform:
+  - x86
+  - x64
 
 # branches to build
 branches:
