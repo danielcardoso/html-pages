@@ -1,6 +1,6 @@
 env:
   global:
-    - snyk=4d950846-8786-402e-845d-2fc86442fba9
+    - SNYK_TOKEN=4d950846-8786-402e-845d-2fc86442fba9
     - PAGES_USER=html-pages
     - PAGES_PASSWORD=1904
 
