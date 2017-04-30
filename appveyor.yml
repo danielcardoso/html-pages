@@ -1,4 +1,8 @@
 environment:
+  global:
+    - snyk=4d950846-8786-402e-845d-2fc86442fba9
+    - PAGES_USER=html-pages
+    - PAGES_PASSWORD=1904
   matrix:
     - nodejs_version: "6"
     - nodejs_version: "7"

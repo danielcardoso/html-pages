@@ -10,9 +10,7 @@ const request = require('urllib-sync').request;
 const options = {
   'no-clipboard': true,
   'no-notifications': true,
-  'log-level': 'debug',
   'no-port-scan': true,
-  // silent: true,
   port: 8888
 };
 
