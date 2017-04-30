@@ -154,7 +154,6 @@ pagesServer.stop()
 
 ## What next?
 
-* Display logs;
 * Enable HTTPS support;
 * Add Proxy support;
 * Provide a /robots.txt (whose content defaults to `'User-agent: *\nDisallow: /'`);
@@ -166,6 +165,7 @@ pagesServer.stop()
 
 * v1.7.0
   - Logs all requests: add options `log-level`, `verbose` and `silent` to filter the logs
+  - Minor improvements
 * v1.6.0
   - Replace the option `--no-browser` with the `--open` or `-o`
   - Added some logging to console

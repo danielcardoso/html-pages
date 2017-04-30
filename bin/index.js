@@ -71,7 +71,7 @@ if (flags.logLevel === 'debug') {
   global.utils.logger.logDebug(color.blue('Options List:'), true);
   // Print default options
   _.each(flags, function (value, key) {
-    if (!_.includes(['dry-test'], key)) {
+    if (!_.includes(['dryTest'], key)) {
       const msgKey = '' +
         'Option: `' + color.blue(_.lowerCase(key).replace(/ /g, '-')) + '` set to ' +
         '`' + color.blue(_.isObject(value) ? JSON.stringify(value) : value) + '`';

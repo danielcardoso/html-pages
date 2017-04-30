@@ -1,12 +1,6 @@
 # version format
 # you can use {branch} name in version format too
-version: 1.0.{build}-{branch}
-
-# Do not build on tags (GitHub and BitBucket)
-skip_tags: true
-
-# Start builds on tags only (GitHub and BitBucket)
-skip_non_tags: true
+version: 1.0.{build}
 
 # environment variables
 environment:
@@ -47,14 +41,3 @@ test_script:
 
 # Don't actually build.
 build: off
-
-#---------------------------------#
-#         notifications           #
-#---------------------------------#
-notifications:
-
-  # Email
-  - provider: Email
-    to:
-      - appveyor-support@danielcardoso.net
-    on_build_status_changed: true
