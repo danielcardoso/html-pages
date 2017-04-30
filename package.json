@@ -3,7 +3,7 @@
   "title": "HTML Pages",
   "description": "Simple development HTTP Server for file serving and directory listing made by a Designer. Use it for hacking your HTML/JavaScript/CSS files, but not for deploying your final site.",
   "desc": "Simple development HTTP Server for file serving and directory listing made by a Designer",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "files": [
     "bin",
     "example",
@@ -57,9 +57,10 @@
   ],
   "scripts": {
     "precommit": "lint-staged",
+    "prepush": "npm test",
     "js-lint": "semistandard --verbose | snazzy",
     "test-mocha": "mocha test/test-*.js",
-    "test-vulnerabilities": "snyk test",
+    "test-vulnerabilities": "snyk test && nsp check",
     "test": "npm run test-mocha && npm run js-lint && npm run test-vulnerabilities",
     "generate-example": "node ./lib/generate-files.js"
   },
@@ -90,7 +91,8 @@
     "mocha": "^3.3.0",
     "mocha-logger": "^1.0.5",
     "supertest": "^3.0.0",
-    "snyk": "^1.29.0"
+    "snyk": "^1.29.0",
+    "nsp": "^2.6.3"
   },
   "dependencies": {
     "basic-auth": "^1.1.0",
@@ -105,7 +107,7 @@
     "dargs": "^5.1.0",
     "detect-port": "^1.1.1",
     "file-exists": "^3.0.2",
-    "filesize": "^3.5.8",
+    "filesize": "^3.5.9",
     "fs-extra": "^3.0.0",
     "fs-promise": "^2.0.2",
     "handlebars": "^4.0.7",
