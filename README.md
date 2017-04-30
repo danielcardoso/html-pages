@@ -40,6 +40,7 @@
 [![Windows Build Status](https://img.shields.io/appveyor/ci/danielcardoso/html-pages/master.svg?style=flat-square&label=Windows%20Build)](https://ci.appveyor.com/project/danielcardoso/html-pages)
 [![dependency Status](https://img.shields.io/david/danielcardoso/html-pages.svg?style=flat-square)](https://david-dm.org/danielcardoso/html-pages)
 [![devDependency Status](https://img.shields.io/david/dev/danielcardoso/html-pages.svg?style=flat-square)](https://david-dm.org/danielcardoso/html-pages?type=dev)
+[![Known Vulnerabilities](https://snyk.io/test/npm/name/badge.svg?style=flat-square)](https://snyk.io/test/npm/html-pages)
 
 
 ## Quick start

@@ -59,7 +59,8 @@
     "precommit": "lint-staged",
     "js-lint": "semistandard --verbose | snazzy",
     "generate-example": "node ./lib/generate-files.js",
-    "test": "snyk test && mocha test/test-*.js && npm run js-lint"
+    "test": "mocha test/test-*.js && npm run js-lint && npm run test-vulnerabilities",
+    "test-vulnerabilities": "snyk auth 4d950846-8786-402e-845d-2fc86442fba9 && snyk test"
   },
   "lint-staged": {
     "*.js": [
