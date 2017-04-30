@@ -20,7 +20,7 @@ function executeTest (args, callback) {
 }
 
 describe('command line usage', function () {
-  this.timeout(3500);
+  this.timeout(5000);
 
   before(function () {
   });

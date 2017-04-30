@@ -30,6 +30,31 @@
       "show": true
     },
     {
+      "name": "log-level",
+      "alias": "l",
+      "description": "Display logs in the console. The possible values are `silent`, `error`, `warn`, `info`, `debug`. Any logs of a higher level than the setting are shown. If you define it as `info`, it will show `warn` and `error` outputs also",
+      "defaultValue": "info",
+      "type": "String",
+      "typeLabel": "string",
+      "show": true
+    },
+    {
+      "name": "silent",
+      "alias": "S",
+      "description": "Set `log-level` to `silent` mode",
+      "type": "Boolean",
+      "show": true
+    },
+    {
+      "name": "verbose",
+      "alias": "V",
+      "description": "Set `log-level` to `debug` mode",
+      "type": "Boolean",
+      "show": true
+    },
+
+
+    {
       "name": "no-cache",
       "description": "Disabled the caching files in the browser",
       "type": "Boolean",
@@ -104,13 +129,6 @@
     {
       "name": "no-clipboard",
       "description": "Don't copy address to clipboard",
-      "type": "Boolean",
-      "show": true
-    },
-    {
-      "name": "silent",
-      "alias": "s",
-      "description": "Don't log anything to the console",
       "type": "Boolean",
       "show": true
     },

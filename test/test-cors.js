@@ -8,7 +8,7 @@ let server;
 let htmlPages;
 
 describe('cors tests', function () {
-  this.timeout(4000);
+  this.timeout(5000);
 
   beforeEach(function () {
     // mlog.log('Start test');

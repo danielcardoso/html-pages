@@ -8,10 +8,11 @@ const sleep = require('thread-sleep');
 const request = require('urllib-sync').request;
 
 const options = {
-  // 'no-clipboard': true,
-  // 'no-notifications': true,
+  'no-clipboard': true,
+  'no-notifications': true,
+  'log-level': 'debug',
   'no-port-scan': true,
-  silent: true,
+  // silent: true,
   port: 8888
 };
 
@@ -32,7 +33,7 @@ const startServer = (opts = {}, dirname) => {
   const checkIfServerIsOnline = (retries = 0) => {
     try {
       // Check if the server is online
-      request(httpHost);
+      request(httpHost + '/check-if-server-is-already-up/');
 
       return true;
     } catch (err) {

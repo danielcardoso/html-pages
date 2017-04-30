@@ -9,8 +9,9 @@ const compress = require('micro-compress');
 const detect = require('detect-port');
 const { coroutine } = require('bluebird');
 const updateNotifier = require('update-notifier');
-const { red } = require('chalk');
+const color = require('chalk');
 const nodeVersion = require('node-version');
+const _ = require('lodash');
 
 // Ours
 const pkg = require('../package');
@@ -18,16 +19,16 @@ const listening = require('../lib/listening');
 const serverHandler = require('../lib/server');
 const FunctionalUtils = require('../lib/functional-utils');
 const ParseCommandLineArgs = require('../lib/parse-command-line-args');
+const logger = require('../lib/logger');
 
 let HtmlPages = {
-  server: null,
-  logLevel: 2
+  server: null
 };
 
 // Throw an error if node version is too low
 if (nodeVersion.major < 6 || (nodeVersion.major === 6 && nodeVersion.minor < 6)) {
   console.error(
-    `${red('Error!')} ${pkg.title} requires at least version 6.6 of Node. Please upgrade!`
+    `${color.red('Error!')} ${pkg.title} requires at least version 6.6.0 of Node. Please upgrade!`
   );
   process.exit(1);
 }
@@ -41,9 +42,7 @@ if (process.env.NODE_ENV !== 'production' && pkg.dist) {
 }
 
 const flags = ParseCommandLineArgs();
-
 const directory = flags.root;
-
 let current = process.cwd();
 
 if (directory) {
@@ -58,6 +57,28 @@ let ignoredFiles = ['.DS_Store', '._.DS_Store'];
 
 if (flags.ignore && flags.ignore.length > 0) {
   ignoredFiles = ignoredFiles.concat(flags.ignore);
+}
+
+HtmlPages.options = flags;
+
+/*
+  Define global functions
+ */
+global.utils = {};
+global.utils.logger = logger(flags.logLevel);
+
+if (flags.logLevel === 'debug') {
+  global.utils.logger.logDebug(color.blue('Options List:'), true);
+  // Print default options
+  _.each(flags, function (value, key) {
+    if (!_.includes(['dry-test'], key)) {
+      const msgKey = '' +
+        'Option: `' + color.blue(_.lowerCase(key).replace(/ /g, '-')) + '` set to ' +
+        '`' + color.blue(_.isObject(value) ? JSON.stringify(value) : value) + '`';
+
+      global.utils.logger.logDebug(msgKey, true);
+    }
+  });
 }
 
 // Initialize utils functions
@@ -75,7 +96,7 @@ detect(port).then(open => {
 
   if (inUse && flags.noPortScan === true) {
     console.error(
-      red(
+      color.red(
         'The port `' + port + '` is already in use.'
       )
     );

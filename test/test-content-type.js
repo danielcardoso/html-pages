@@ -19,7 +19,7 @@ describe('content-type tests', function () {
   this.timeout(1000);
 
   before(function () {
-    this.timeout(4000);
+    this.timeout(5000);
     server = serverCaller.startServer({}, webDir);
     htmlPages = server.htmlPages;
   });

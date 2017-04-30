@@ -91,6 +91,12 @@ html-pages --help
 * `-d, --directory-index`  *file*  —  The index file of a directory. Set to empty `""` to always show the directory listing (defaults to index.html)
 * `-h, --help`                     —  Output usage information
 * `-i, --ignore`  *string/array*   —  Files and directories to ignore. Use a string (comma-separated string for paths to ignore) if your are using the command line and an array if you are calling it via API
+* `-l, --log-level`  *string*       —  Display logs in the console. The possible values are `silent`, `error`, `warn`, `info`, `debug`. Any logs of a higher level than the setting are shown. If you define it as `info`, it will show `warn` and `error` outputs also. (defaults to `info`)
+  * `silent` - It will suppress all application logging. The Fatal errors will be shown.
+  * `error` - Any error which is fatal to the operation, but not the service or application (can't open a required file, missing data, etc.). These errors will force user (administrator, or direct user) intervention. These are usually reserved (in my apps) for incorrect connection strings, missing services, etc.
+  * `warn` - Anything that can potentially cause application oddities, but for which I am automatically recovering. (Such as switching from a primary to backup server, retrying an operation, missing secondary data, etc.)
+  * `info` - Generally useful information to log (service start/stop, configuration assumptions, etc). Info I want to always have available but usually don't care about under normal circumstances. This is my out-of-the-box config level.
+  * `debug` - Information that is diagnostically helpful to people more than just developers (IT, sysadmins, etc.).
 * `-o, --open`                     —  Open browser window after starting the server
 * `--no-cache`                     —  Disabled the caching files in the browser
 * `--no-clipboard`                 —  Don't copy address to clipboard
@@ -99,8 +105,9 @@ html-pages --help
 * `--no-port-scan`                 —  Disabled the port scanning when the selected port is already in use
 * `-p, --port`  *number*           —  Port to listen on (defaults to 8084)
 * `-r, --root`  *string*           —  The root directory (defaults to ./)
-* `-s, --silent`                   —  Don't log anything to the console
+* `-S, --silent`                   —  Set `log-level` to `silent` mode
 * `-u, --unzipped`                 —  Disable GZIP compression
+* `-V, --verbose`                  —  Set `log-level` to `debug` mode
 * `-v, --version`                  —  Output the version number
 
 Default options:
@@ -156,6 +163,8 @@ pagesServer.stop()
 
 ## Version history
 
+* v1.7.0
+  - Logs all requests: add options `log-level`, `verbose` and `silent` to filter the logs
 * v1.6.0
   - Replace the option `--no-browser` with the `--open` or `-o`
   - Added some logging to console
