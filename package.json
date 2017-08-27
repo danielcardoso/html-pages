@@ -1,7 +1,7 @@
 {
   "name": "html-pages",
   "title": "HTML Pages",
-  "description": "Simple development HTTP Server for file serving and directory listing made by a Designer. Use it for hacking your HTML/JavaScript/CSS files, but not for deploying your final site.",
+  "description": "Simple development HTTP Server for file serving and directory listing made by a Designer. Use it for hacking your HTML/JavaScript/CSS files but not for deploying your final site.",
   "desc": "Simple development HTTP Server for file serving and directory listing made by a Designer",
   "version": "2.0.0",
   "files": [
