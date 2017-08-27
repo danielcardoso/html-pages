@@ -1,0 +1,318 @@
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #f2f2f2;
+    z-index: 10;
+    font-size: 18px;
+    padding: 20px 0;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0), 0 1px 10px 0 rgba(0,0,0,0), 0 2px 4px -1px rgba(0,0,0,0);
+    transition: all 250ms linear;
+}
+
+header.stick {
+    padding: 15px 0;
+    background: #fff;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
+}
+
+header > nav {
+    width: calc(100% - 50px);
+    position: relative;
+}
+
+header > * {
+    vertical-align: top;
+}
+
+/* options/select wrapper with switch anchors */
+.html-pages-options {
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    text-align: right;
+}
+
+.html-pages-options button {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #d0d0d0;
+    margin: 0;
+    padding: 8px;
+    box-sizing: content-box;
+    position: relative;
+    background: transparent;
+    border-width: 0;
+    cursor: pointer;
+}
+
+.background-effect {
+    position: relative;
+}
+
+.background-effect:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20%;
+    height: 20%;
+    content: "";
+    transform: translate(-50%, -50%);
+    transition: all 150ms ease;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 100%;
+}
+
+.background-effect:hover:before,
+.background-effect:focus:before {
+    background: rgba(0, 0, 0, .12);
+    width: 100%;
+    height: 100%;
+}
+
+.background-effect:active:before {
+    background: rgba(0, 0, 0, .2);
+}
+
+.html-pages-options .html-pages-option--selected {
+    display: none;
+}
+
+/* General style of switch items' list */
+
+.html-pages-switcher ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Clear eventual floats */
+.html-pages-switcher ul:before,
+.html-pages-switcher ul:after {
+    content: " ";
+    display: table;
+}
+
+.html-pages-switcher ul:after {
+    clear: both;
+}
+
+.html-pages-switcher ul li {
+    display: block;
+    position: relative;
+}
+
+.html-pages-image {
+    display: block;
+    margin: 0 auto;
+}
+
+.html-pages-image img {
+    display: inline-block;
+    max-width: 100%;
+    border: none;
+}
+
+.html-pages-title {
+    margin: 0;
+    padding: 0;
+}
+
+.html-pages-price {
+    color: #c0c0c0;
+}
+
+/* Large grid view */
+.html-pages-view--grid ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin: 0 -10px;
+}
+
+.html-pages-view--grid ul li {
+    justify-content: left;
+    flex-direction: column;
+    align-items: left;
+    flex: 1 0 25%;
+    max-width: 25%;
+    margin: 0;
+}
+
+.html-pages-view--grid ul a {
+    margin: 10px;
+    text-align: left;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+    transition: all 300ms ease;
+}
+
+.html-pages-view--grid ul a:hover {
+    background: #F7F7F7;
+}
+
+@media screen and (max-width: 319px) {
+    .html-pages-view--grid ul li {
+        flex: 1 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 699px) {
+    .html-pages-view--grid ul li {
+        flex: 1 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1099px) {
+    .html-pages-view--grid ul li {
+        flex: 1 0 33%;
+        max-width: 33%;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .html-pages-view--grid ul li {
+        flex: 1 0 25%;
+        max-width: 25%;
+    }
+}
+
+
+.html-pages-view--grid ul li a {
+    padding: 20px 0;
+}
+
+.html-pages-view--grid .column-file-name {
+    line-height: 26px;
+    padding: 0 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*
+
+.html-pages-view--grid .html-pages-title {
+    font-size: 2em;
+}
+
+.html-pages-view--grid .html-pages-details {
+    max-width: 300px;
+    min-height: 70px;
+    margin: 0 auto;
+}
+
+.html-pages-view--grid .html-pages-price {
+    margin: 10px 0;
+    font-size: 1.5em;
+}*/
+
+
+/* List view */
+
+
+.html-pages-view--list > ul {
+    background-color: rgb(255,255,255);
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 2px;
+}
+
+.html-pages__resources-list li.header {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(0,0,0,.54);
+}
+
+.html-pages__resources-list .resource-item--title {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0 10px;
+    background: transparent;
+    box-shadow: none;
+    color: rgba(0,0,0,.54);
+    font-weight: 500;
+}
+
+.html-pages__resources-list  li + .resource-item--title {
+    margin-top: 20px;
+}
+
+.resource-item__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.html-pages-view--list .resource-item__content {
+    line-height: 20px;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.resource-item__content.resource-item__content--empty {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    background: transparent;
+}
+
+.html-pages-view--grid .resource-item--empty {
+    flex-basis: 100%;
+    max-width: 100%;
+    background: transparent;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.resource-item__content--empty img {
+    margin-bottom: 20px;
+    opacity: .1;
+}
+
+.resource-item__content--empty h4 {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.html-pages__resources-list li:last-child .resource-item__content {
+    border-bottom-width: 0;
+}
+
+.html-pages__resources-list .resource-item__content > div {
+    flex: 0 0 70px;
+}
+
+.html-pages__resources-list .resource-item__content > .column-file-name {
+    flex: auto;
+    font-weight: bold;
+}
+
+.html-pages__resources-list .resource-item__content .column-file-last-created,
+.html-pages__resources-list .resource-item__content .column-file-last-modified {
+    flex: 0 0 23%;
+}
+
+
+
+.html-pages-options a:hover {
+    background: rgba(0,0,0,1.12);
+}

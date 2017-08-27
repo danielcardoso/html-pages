@@ -92,7 +92,9 @@ html-pages --help
 * `-d, --directory-index`  *file*  —  The index file of a directory. Set to empty `""` to always show the directory listing (defaults to index.html)
 * `-h, --help`                     —  Output usage information
 * `-i, --ignore`  *string/array*   —  Files and directories to ignore. Use a string (comma-separated string for paths to ignore) if your are using the command line and an array if you are calling it via API
-* `-l, --log-level`  *string*       —  Display logs in the console. The possible values are `silent`, `error`, `warn`, `info`, `debug`. Any logs of a higher level than the setting are shown. If you define it as `info`, it will show `warn` and `error` outputs also. (defaults to `info`)
+* `-L, --layout`  *string*         —  Specify the page layout. Available options `grid` or `list`. (defaults to
+                                   grid)
+* `-l, --log-level`  *string*      —  Display logs in the console. The possible values are `silent`, `error`, `warn`, `info`, `debug`. Any logs of a higher level than the setting are shown. If you define it as `info`, it will show `warn` and `error` outputs also. (defaults to `info`)
   * `silent` - It will suppress all application logging. The Fatal errors will be shown.
   * `error` - Any error which is fatal to the operation, but not the service or application (can't open a required file, missing data, etc.). These errors will force user (administrator, or direct user) intervention. These are usually reserved (in my apps) for incorrect connection strings, missing services, etc.
   * `warn` - Anything that can potentially cause application oddities, but for which I am automatically recovering. (Such as switching from a primary to backup server, retrying an operation, missing secondary data, etc.)
@@ -158,11 +160,16 @@ pagesServer.stop()
 * Add Proxy support;
 * Provide a /robots.txt (whose content defaults to `'User-agent: *\nDisallow: /'`);
 * Improve HTML errors;
-* Add grid layout;
 
 
 ## Version history
 
+* v2.0.0
+  - Specify the page layout. Available options `grid` or `list`
+  - Add `host` address to bind to. By default it supports "any address"
+  - Add `localhost` option to work only locally, blocking external connections
+  - Disable notification by default
+  - Minor improvements
 * v1.7.0
   - Logs all requests: add options `log-level`, `verbose` and `silent` to filter the logs
   - Minor improvements

@@ -31,9 +31,7 @@ describe('command line usage', function () {
     executeTest([], (error, stdout, stdin) => {
       assert(!error, error);
       assert(stdout.indexOf('HTML Pages is Online!') !== -1, 'Title not found');
-      assert(stdout.indexOf('Local Network:') !== -1, 'Local Network not found');
-      assert(stdout.indexOf('On Your Network:') !== -1, 'On Your Network not found');
-      assert(stdout.indexOf('://localhost:') !== -1, 'Local host not found');
+      assert(stdout.indexOf('Server is ready!') !== -1, 'Server is not ready!');
       assert(stdout.indexOf('html-pages stopped') !== -1, 'Stop message not found');
       done();
     });
@@ -46,6 +44,13 @@ describe('command line usage', function () {
       done();
     });
   });
+  it('-v', done => {
+    executeTest(['-v'], (error, stdout, stdin) => {
+      assert(!error, error);
+      assert(stdout.indexOf(pkg.version) === 0, 'version not found');
+      done();
+    });
+  });
   it('--help', done => {
     executeTest(['--help'], (error, stdout, stdin) => {
       assert(!error, error);
@@ -53,17 +58,54 @@ describe('command line usage', function () {
       done();
     });
   });
-  it('--port', done => {
-    executeTest(['--port=14123'], (error, stdout, stdin) => {
+  it('-h', done => {
+    executeTest(['-h'], (error, stdout, stdin) => {
       assert(!error, error);
+      assert(stdout.indexOf('Usage: ' + pkg.name) !== -1, 'usage helper not found');
+      done();
+    });
+  });
+  it('--localhost', done => {
+    executeTest(['--localhost', '--port=8080'], (error, stdout, stdin) => {
+      assert(!error, error);
+      assert(stdout.indexOf('Server is ready!') !== -1, 'Server is not ready!');
+      assert(stdout.indexOf('http://localhost:8080') !== -1, 'Localhost not found');
+      done();
+    });
+  });
+  it('--port', done => {
+    executeTest(['--port=14123', '--localhost'], (error, stdout, stdin) => {
+      assert(!error, error);
+      assert(stdout.indexOf('Server is ready!') !== -1, 'Server is not ready!');
       assert(stdout.indexOf('HTML Pages is Online!') !== -1, 'serving string not found');
       assert(stdout.indexOf('http://localhost:14123') !== -1, 'port string not found');
       done();
     });
   });
+  // it.only('-p', done => {
+  //   executeTest(['-p 14124', '--localhost'], (error, stdout, stdin) => {
+  //     assert(!error, error);
+  //     assert(stdout.indexOf('Server is ready!') !== -1, 'Server is not ready!');
+  //     assert(stdout.indexOf('HTML Pages is Online!') !== -1, 'serving string not found');
+  //     assert(stdout.indexOf('http://localhost:14124') !== -1, 'port string not found');
+  //     done();
+  //   });
+  // });
   it('--verbose', done => {
     executeTest(['--verbose'], (error, stdout, stdin) => {
       assert(!error, error);
+      assert(stdout.indexOf('Server is ready!') !== -1, 'Server is not ready!');
+      assert(stdout.indexOf('Options List:') !== -1, 'List of options title not found');
+      assert(stdout.indexOf('Option: `verbose` set to `true`') !== -1, '`verbose` options is not defined as `true`');
+      assert(stdout.indexOf('Option: `silent` set to `false`') !== -1, '`silent` options is not defined as `false`');
+      assert(stdout.indexOf('Option: `log-level` set to `debug`') !== -1, '`log-level` options is not defined as `debug`');
+      done();
+    });
+  });
+  it('-V', done => {
+    executeTest(['-V'], (error, stdout, stdin) => {
+      assert(!error, error);
+      assert(stdout.indexOf('Server is ready!') !== -1, 'Server is not ready!');
       assert(stdout.indexOf('Options List:') !== -1, 'List of options title not found');
       assert(stdout.indexOf('Option: `verbose` set to `true`') !== -1, '`verbose` options is not defined as `true`');
       assert(stdout.indexOf('Option: `silent` set to `false`') !== -1, '`silent` options is not defined as `false`');
@@ -73,6 +115,13 @@ describe('command line usage', function () {
   });
   it('--silent', done => {
     executeTest(['--silent'], (error, stdout, stdin) => {
+      assert(!error, error);
+      assert(stdout === '', 'stdout not empty');
+      done();
+    });
+  });
+  it('-S', done => {
+    executeTest(['-S'], (error, stdout, stdin) => {
       assert(!error, error);
       assert(stdout === '', 'stdout not empty');
       done();

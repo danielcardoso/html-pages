@@ -7,9 +7,9 @@ const path = require('path');
 const micro = require('micro');
 const compress = require('micro-compress');
 const detect = require('detect-port');
-const { coroutine } = require('bluebird');
+const coroutine = require('bluebird').coroutine;
 const updateNotifier = require('update-notifier');
-const color = require('chalk');
+const chalk = require('chalk');
 const nodeVersion = require('node-version');
 const _ = require('lodash');
 
@@ -28,7 +28,7 @@ let HtmlPages = {
 // Throw an error if node version is too low
 if (nodeVersion.major < 6 || (nodeVersion.major === 6 && nodeVersion.minor < 6)) {
   console.error(
-    `${color.red('Error!')} ${pkg.title} requires at least version 6.6.0 of Node. Please upgrade!`
+    `${chalk.red('Error!')} ${pkg.title} requires at least version 6.6.0 of Node. Please upgrade!`
   );
   process.exit(1);
 }
@@ -68,13 +68,17 @@ global.utils = {};
 global.utils.logger = logger(flags.logLevel);
 
 if (flags.logLevel === 'debug') {
-  global.utils.logger.logDebug(color.blue('Options List:'), true);
+  global.utils.logger.logDebug(chalk.blue('Options List:'), true);
   // Print default options
   _.each(flags, function (value, key) {
-    if (!_.includes(['dryTest'], key)) {
+    if (!_.includes(['dryTest', 'onlyLocalhost'], key)) {
+      if (key === 'layout' && value === false) {
+        value = 'grid';
+      }
+
       const msgKey = '' +
-        'Option: `' + color.blue(_.lowerCase(key).replace(/ /g, '-')) + '` set to ' +
-        '`' + color.blue(_.isObject(value) ? JSON.stringify(value) : value) + '`';
+        'Option: `' + chalk.blue(_.lowerCase(key).replace(/ /g, '-')) + '` set to ' +
+        '`' + chalk.blue(_.isObject(value) ? JSON.stringify(value) : value) + '`';
 
       global.utils.logger.logDebug(msgKey, true);
     }
@@ -83,6 +87,8 @@ if (flags.logLevel === 'debug') {
 
 // Initialize utils functions
 const fu = FunctionalUtils(flags, ignoredFiles);
+// Add functional functions to global utils
+global.utils = _.merge(global.utils, fu);
 
 const handler = coroutine(function * (req, res) {
   yield serverHandler(req, res, flags, current, fu);
@@ -90,13 +96,14 @@ const handler = coroutine(function * (req, res) {
 
 HtmlPages.server = flags.unzipped ? micro(handler) : micro(compress(handler));
 let port = flags.port;
+let host = flags.host;
 
 detect(port).then(open => {
   let inUse = open !== port;
 
   if (inUse && flags.noPortScan === true) {
     console.error(
-      color.red(
+      chalk.red(
         'The port `' + port + '` is already in use.'
       )
     );
@@ -115,6 +122,7 @@ detect(port).then(open => {
 
   HtmlPages.server.listen(
     port,
+    host,
     coroutine(function * () {
       yield listening(HtmlPages.server, current, inUse, flags.noClipboard !== true, fu);
     })
@@ -123,7 +131,7 @@ detect(port).then(open => {
   if (flags.dryTest === true) {
     setTimeout(function () {
       process.emit('kill');
-    }, 1000);
+    }, 300);
   }
 });
 

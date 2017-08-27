@@ -1,0 +1,547 @@
+{
+  "iconDefinitions": {
+    // File types
+    "file.json": {
+      "iconPath": "./src/file.json.svg"
+    },
+    "file.c": {
+      "iconPath": "./src/file.c.svg"
+    },
+    "file.cpp": {
+      "iconPath": "./src/file.cpp.svg"
+    },
+    "file.d": {
+      "iconPath": "./src/file.d.svg"
+    },
+    "file.h": {
+      "iconPath": "./src/file.h.svg"
+    },
+    "file.js": {
+      "iconPath": "./src/file.js.svg"
+    },
+    "file.html": {
+      "iconPath": "./src/file.html.svg"
+    },
+    "file.css": {
+      "iconPath": "./src/file.css.svg"
+    },
+    "file.stylus": {
+      "iconPath": "./src/file.stylus.svg"
+    },
+    "file.sass": {
+      "iconPath": "./src/file.sass.svg"
+    },
+    "file.less": {
+      "iconPath": "./src/file.less.svg"
+    },
+    "file.markdown": {
+      "iconPath": "./src/file.markdown.svg"
+    },
+    "file.xml": {
+      "iconPath": "./src/file.xml.svg"
+    },
+    "file.cs": {
+      "iconPath": "./src/file.cs.svg"
+    },
+    "file.fs": {
+      "iconPath": "./src/file.fs.svg"
+    },
+    "file.go": {
+      "iconPath": "./src/file.go.svg"
+    },
+    "file.lua": {
+      "iconPath": "./src/file.lua.svg"
+    },
+    "file.rust": {
+      "iconPath": "./src/file.rust.svg"
+    },
+    "file.ruby": {
+      "iconPath": "./src/file.ruby.svg"
+    },
+    "file.python": {
+      "iconPath": "./src/file.python.svg"
+    },
+    "file.php": {
+      "iconPath": "./src/file.php.svg"
+    },
+    "file.julia": {
+      "iconPath": "./src/file.julia.svg"
+    },
+    "file.haxe": {
+      "iconPath": "./src/file.haxe.svg"
+    },
+    "file.java": {
+      "iconPath": "./src/file.java.svg"
+    },
+    "file.ts": {
+      "iconPath": "./src/file.ts.svg"
+    },
+    "file.d.ts": {
+      "iconPath": "./src/file.d.ts.svg"
+    },
+    "file.vue": {
+      "iconPath": "./src/file.vue.svg"
+    },
+    "file.haskell": {
+      "iconPath": "./src/file.haskell.svg"
+    },
+    "file.idris": {
+      "iconPath": "./src/file.idris.svg"
+    },
+    "file.coq": {
+      "iconPath": "./src/file.coq.svg"
+    },
+    "file.ml": {
+      "iconPath": "./src/file.ml.svg"
+    },
+    "file.fst": {
+      "iconPath": "./src/file.fst.svg"
+    },
+    "file.ats": {
+      "iconPath": "./src/file.ats.svg"
+    },
+    "file.prolog": {
+      "iconPath": "./src/file.prolog.svg"
+    },
+    "file.elm": {
+      "iconPath": "./src/file.elm.svg"
+    },
+    "file.purescript": {
+      "iconPath": "./src/file.purescript.svg"
+    },
+    "file.elixir": {
+      "iconPath": "./src/file.elixir.svg"
+    },
+    "file.text": {
+      "iconPath": "./src/file.text.svg"
+    },
+    "file.image": {
+      "iconPath": "./src/file.image.svg"
+    },
+    "file.font": {
+      "iconPath": "./src/file.font.svg"
+    },
+    "file.crt": {
+      "iconPath": "./src/file.crt.svg"
+    },
+    "file.key": {
+      "iconPath": "./src/file.key.svg"
+    },
+    "file.shell": {
+      "iconPath": "./src/file.shell.svg"
+    },
+    "file.binary": {
+      "iconPath": "./src/file.binary.svg"
+    },
+    "file.zip": {
+      "iconPath": "./src/file.zip.svg"
+    },
+    "file.clojure": {
+      "iconPath": "./src/file.clojure.svg"
+    },
+    "file.sourcemap": {
+      "iconPath": "./src/file.sourcemap.svg"
+    },
+    "file.lib": {
+      "iconPath": "./src/file.lib.svg"
+    },
+    "file.exe": {
+      "iconPath": "./src/file.exe.svg"
+    },
+    "file.scala": {
+      "iconPath": "./src/file.scala.svg"
+    },
+    "file.jade": {
+      "iconPath": "./src/file.jade.svg"
+    },
+    "file.scheme": {
+      "iconPath": "./src/file.scheme.svg"
+    },
+    "file.lisp": {
+      "iconPath": "./src/file.lisp.svg"
+    },
+    "file.elisp": {
+      "iconPath": "./src/file.elisp.svg"
+    },
+    "file.tex": {
+      "iconPath": "./src/file.tex.svg"
+    },
+    "file.ptl": { // this is ad.
+      "iconPath": "./src/file.ptl.svg"
+    },
+    "file.erlang": {
+      "iconPath": "./src/file.erlang.svg"
+    },
+    "file.swift": {
+      "iconPath": "./src/file.swift.svg"
+    },
+    "file.coffee": {
+      "iconPath": "./src/file.coffee.svg"
+    },
+    "file.objc": {
+      "iconPath": "./src/file.objc.svg"
+    },
+    "file.vb": {
+      "iconPath": "./src/file.vb.svg"
+    },
+    "file.handlebars": {
+      "iconPath": "./src/file.handlebars.svg"
+    },
+    "file.powershell": {
+      "iconPath": "./src/file.powershell.svg"
+    },
+    "file.pester": {
+      "iconPath": "./src/file.pester.svg"
+    },
+    "file.slim": {
+      "iconPath": "./src/file.slim.svg"
+    },
+    "file.jsx": {
+      "iconPath": "./src/file.jsx.svg"
+    },
+    "file.tsx": {
+      "iconPath": "./src/file.tsx.svg"
+    },
+    "file.yaml": {
+      "iconPath": "./src/file.yaml.svg"
+    },
+    "file.toml": {
+      "iconPath": "./src/file.toml.svg"
+    },
+    // Config files
+    "config.npm": {
+      "iconPath": "./src/config.npm.svg"
+    },
+    "config.git": {
+      "iconPath": "./src/config.git.svg"
+    },
+    "config.format": {
+      "iconPath": "./src/config.format.svg"
+    },
+    "config.travis": {
+      "iconPath": "./src/config.travis.svg"
+    },
+    "config.appveyor": {
+      "iconPath": "./src/config.appveyor.svg"
+    },
+    "config.license": {
+      "iconPath": "./src/config.license.svg"
+    },
+    "config.editorconfig": {
+      "iconPath": "./src/config.editorconfig.svg"
+    },
+    "config.bower": {
+      "iconPath": "./src/config.bower.svg"
+    },
+    "config.docker": {
+      "iconPath": "./src/config.docker.svg"
+    },
+    "config.makefile": {
+      "iconPath": "./src/config.makefile.svg"
+    },
+    "config.dub": {
+      "iconPath": "./src/config.dub.svg"
+    },
+    "config.grunt": {
+      "iconPath": "./src/config.grunt.svg"
+    },
+    "config.gulp": {
+      "iconPath": "./src/config.gulp.svg"
+    },
+    "config.eslint": {
+      "iconPath": "./src/config.eslint.svg"
+    },
+    "config.babel": {
+      "iconPath": "./src/config.babel.svg"
+    },
+    "config.vs": {
+      "iconPath": "./src/config.vs.svg"
+    },
+    // Folders
+    "folder.test.close": {
+      "iconPath": "./src/folder.test.close.svg"
+    },
+    "folder.test.open": {
+      "iconPath": "./src/folder.test.open.svg"
+    },
+    "folder.vs.close": {
+      "iconPath": "./src/folder.vs.close.svg"
+    },
+    "folder.vs.open": {
+      "iconPath": "./src/folder.vs.open.svg"
+    },
+    "folder.git.close": {
+      "iconPath": "./src/folder.git.close.svg"
+    },
+    "folder.git.open": {
+      "iconPath": "./src/folder.git.open.svg"
+    },
+    "folder.js.close": {
+      "iconPath": "./src/folder.js.close.svg"
+    },
+    "folder.js.open": {
+      "iconPath": "./src/folder.js.open.svg"
+    },
+    "folder.dist.close": {
+      "iconPath": "./src/folder.dist.close.svg"
+    },
+    "folder.dist.open": {
+      "iconPath": "./src/folder.dist.open.svg"
+    },
+    "folder.src.close": {
+      "iconPath": "./src/folder.src.close.svg"
+    },
+    "folder.src.open": {
+      "iconPath": "./src/folder.src.open.svg"
+    },
+    "folder.include.close": {
+      "iconPath": "./src/folder.include.close.svg"
+    },
+    "folder.include.open": {
+      "iconPath": "./src/folder.include.open.svg"
+    },
+    "folder.lib.close": {
+      "iconPath": "./src/folder.lib.close.svg"
+    },
+    "folder.lib.open": {
+      "iconPath": "./src/folder.lib.open.svg"
+    },
+    "folder.ts.close": {
+      "iconPath": "./src/folder.ts.close.svg"
+    },
+    "folder.ts.open": {
+      "iconPath": "./src/folder.ts.open.svg"
+    },
+    // General
+    "_folder_dark": {
+      "iconPath": "./src/folder.close.svg"
+    },
+    "_folder_open_dark": {
+      "iconPath": "./src/folder.open.svg"
+    },
+    "_file_dark": {
+      "iconPath": "./src/file.svg"
+    }
+  },
+  "folderExpanded": "_folder_open_dark",
+  "folder": "_folder_dark",
+  "file": "_file_dark",
+  "fileExtensions": {
+    "json": "file.json",
+    "c": "file.c",
+    "h": "file.h",
+    "hpp": "file.h",
+    "hxx": "file.h",
+    "hh": "file.h",
+    "cpp": "file.cpp",
+    "cc": "file.cpp",
+    "cxx": "file.cpp",
+    "d": "file.d",
+    "di": "file.d",
+    "js": "file.js",
+    "html": "file.html",
+    "htm": "file.html",
+    "css": "file.css",
+    "styl": "file.stylus",
+    "sass": "file.sass",
+    "scss": "file.sass",
+    "less": "file.less",
+    "md": "file.markdown",
+    "cs": "file.cs",
+    "fs": "file.fs",
+    "go": "file.go",
+    "lua": "file.lua",
+    "rs": "file.rust",
+    "py": "file.python",
+    "rb": "file.ruby",
+    "jl": "file.julia",
+    "php": "file.php",
+    "haxe": "file.haxe",
+    "hxml": "file.haxe",
+    "java": "file.java",
+    "ts": "file.ts",
+    "d.ts": "file.d.ts",
+    "vue": "file.vue",
+    "xml": "file.xml",
+    "coffee": "file.coffee",
+    "litcoffee": "file.coffee",
+    "ex": "file.elixir",
+    "exs": "file.elixir",
+    "clj": "file.clojure",
+    "jsx": "file.jsx",
+    "tsx": "file.tsx",
+    "toml": "file.toml",
+    "yml": "file.yaml",
+    "yaml": "file.yaml",
+    "ss": "file.scheme",
+    "scm": "file.scheme",
+    "lisp": "file.lisp",
+    "lsp": "file.lisp",
+    "l": "file.lisp",
+    "cl": "file.lisp",
+    "fasl": "file.lisp",
+    "el": "file.elisp",
+    "elc": "file.elisp",
+    "ptl": "file.ptl",
+    "patel": "file.ptl",
+    "hs": "file.haskell",
+    "lhs": "file.haskell",
+    "idr": "file.idris",
+    "v": "file.coq",
+    "ml": "file.ml",
+    "mli": "file.ml",
+    "mll": "file.ml",
+    "fst": "file.fst",
+    "sats": "file.ats",
+    "dats": "file.ats",
+    "pro": "file.prolog",
+    "P": "file.prolog",
+    "elm": "file.elm",
+    "purs": "file.purescript",
+    "slim": "file.slim",
+    "skim": "file.slim",
+    "erl": "file.erlang",
+    "swift": "file.swift",
+    "tex": "file.tex",
+    "vb": "file.vb",
+    "mk": "config.makefile",
+    "make": "config.makefile",
+    "jade": "file.jade",
+    "pug": "file.jade",
+    "scala": "file.scala",
+    "js.map": "file.sourcemap",
+    "css.map": "file.sourcemap",
+    "sh": "file.shell",
+    "zsh": "file.shell",
+    "bash": "file.shell",
+    "fish": "file.shell",
+    "elv": "file.shell",
+    "bat": "file.shell",
+    "cmd": "file.shell",
+    "txt": "file.text",
+    "bmp": "file.image",
+    "jpg": "file.image",
+    "jpeg": "file.image",
+    "gif": "file.image",
+    "png": "file.image",
+    "svg": "file.image",
+    "tif": "file.image",
+    "tiff": "file.image",
+    "psd": "file.image",
+    "psb": "file.image",
+    "ttf": "file.font",
+    "otf": "file.font",
+    "woff": "file.font",
+    "woff2": "file.font",
+    "sfd": "file.font",
+    "eot": "file.font",
+    "otd": "file.json",
+    "bin": "file.binary",
+    "exe": "file.exe",
+    "dll": "file.lib",
+    "lib": "file.lib",
+    "o": "file.binary",
+    "a": "file.lib",
+    "so": "file.lib",
+    "zip": "file.zip",
+    "tar": "file.zip",
+    "tgz": "file.zip",
+    "gz": "file.zip",
+    "xz": "file.zip",
+    "bzip2": "file.zip",
+    "7z": "file.zip",
+    "rar": "file.zip",
+    "hbs": "file.handlebars",
+    "ps1": "file.powershell",
+    "tests.ps1": "file.pester",
+    "test.ps1": "file.pester",
+    "cer": "file.crt",
+    "cert": "file.crt",
+    "crt": "file.crt",
+    "der": "file.crt",
+    "key": "file.key",
+    "pem": "file.crt"
+  },
+  "fileNames": {
+    "package.json": "config.npm",
+    ".npmignore": "config.npm",
+    ".npmrc": "config.npm",
+    ".esformatter": "config.format",
+    ".clang-format": "config.format",
+    ".tfignore": "config.vs",
+    ".vscodeignore": "config.vs",
+    ".gitignore": "config.git",
+    ".gitattributes": "config.git",
+    ".travis.yml": "config.travis",
+    "appveyor.yml": "config.appveyor",
+    "licence": "config.license",
+    "license": "config.license",
+    "licence.md": "config.license",
+    "license.md": "config.license",
+    "copying": "config.license",
+    ".editorconfig": "config.editorconfig",
+    "readme.md": "file.markdown",
+    "makefile": "config.makefile",
+    "readme": "file.text",
+    "install": "file.text",
+    "releases": "file.text",
+    ".bowerrc": "config.bower",
+    "bower.json": "config.bower",
+    "dockerfile": "config.docker",
+    "dub.json": "config.dub",
+    "dub.sdl": "config.dub",
+    "dub.selections.json": "config.dub",
+    "gruntfile": "config.grunt",
+    "gulpfile": "config.gulp",
+    ".eslintrc": "config.eslint",
+    ".eslintrc.js": "config.eslint",
+    ".eslintrc.json": "config.eslint",
+    ".eslintrc.yaml": "config.eslint",
+    ".eslintrc.yml": "config.eslint",
+    ".eslintignore": "config.eslint",
+    ".babelrc": "config.babel"
+  },
+  "folderNames": {
+    ".vscode": "folder.vs.close",
+    ".git": "folder.git.close",
+    "test": "folder.test.close",
+    "tests": "folder.test.close",
+    "__tests__": "folder.test.close",
+    "spec": "folder.test.close",
+    "node_modules": "folder.js.close",
+    "build": "folder.dist.close",
+    "bin": "folder.dist.close",
+    ".bin": "folder.dist.close",
+    "dist": "folder.dist.close",
+    "deploy": "folder.dist.close",
+    "src": "folder.src.close",
+    "include": "folder.include.close",
+    "source": "folder.src.close",
+    "lib": "folder.lib.close",
+    "typings": "folder.ts.close"
+  },
+  "folderNamesExpanded": {
+    ".vscode": "folder.vs.open",
+    ".git": "folder.git.open",
+    "test": "folder.test.open",
+    "tests": "folder.test.open",
+    "__tests__": "folder.test.open",
+    "spec": "folder.test.open",
+    "node_modules": "folder.js.open",
+    "build": "folder.dist.open",
+    "bin": "folder.dist.open",
+    ".bin": "folder.dist.open",
+    "dist": "folder.dist.open",
+    "deploy": "folder.dist.open",
+    "src": "folder.src.open",
+    "include": "folder.include.open",
+    "source": "folder.src.open",
+    "lib": "folder.lib.open",
+    "typings": "folder.ts.open"
+  },
+  "languageIds": {
+    "objective-c": "file.objc",
+    "prolog": "file.prolog",
+    "slim": "slim"
+  }
+}

@@ -8,7 +8,6 @@ const sleep = require('thread-sleep');
 const request = require('urllib-sync').request;
 
 const options = {
-  'no-notifications': true,
   'log-level': 'silent',
   'no-port-scan': true,
   port: 8888

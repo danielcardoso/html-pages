@@ -12,11 +12,11 @@ const serverCaller = require('./initServer');
 let server;
 let htmlPages;
 
-const webDir = path.resolve(__dirname, '..', 'example', 'All-Extensions');
+const webDir = path.resolve(__dirname, '..', 'example', 'All-Icons');
 const filesList = fs.readdirSync(webDir);
 
 describe('content-type tests', function () {
-  this.timeout(1000);
+  this.timeout(2000);
 
   before(function () {
     this.timeout(5000);
