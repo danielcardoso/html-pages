@@ -89,13 +89,19 @@
     "snazzy": "7.0.0",
     "babel-eslint": "7.2.3",
     "husky": "0.14.3",
-    "lint-staged": "4.1.0",
+    "lint-staged": "4.1.3",
     "urllib-sync": "1.1.4",
     "mocha": "3.5.0",
     "mocha-logger": "1.0.5",
     "supertest": "3.0.0",
-    "snyk": "1.40.1",
-    "nsp": "2.8.0"
+    "snyk": "1.40.2",
+    "nsp": "2.8.0",
+    "eslint-config-semistandard": "11.0.0",
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-node": "5.1.1",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "3.0.1"
   },
   "dependencies": {
     "basic-auth": "1.1.0",
@@ -116,7 +122,6 @@
     "handlebars": "4.0.10",
     "ignore": "3.3.5",
     "ip": "1.1.5",
-    "live-serve": "0.0.0",
     "lodash": "4.17.4",
     "micro": "8.0.4",
     "micro-compress": "1.0.0",
@@ -130,6 +135,6 @@
     "send": "0.15.4",
     "thread-sleep": "2.0.0",
     "update-notifier": "2.2.0",
-    "validator": "8.1.0"
+    "validator": "8.2.0"
   }
 }
