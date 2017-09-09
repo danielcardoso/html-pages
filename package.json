@@ -3,7 +3,7 @@
   "title": "HTML Pages",
   "description": "Simple development HTTP Server for file serving and directory listing made by a Designer. Use it for hacking your HTML/JavaScript/CSS files but not for deploying your final site.",
   "desc": "Simple development HTTP Server for file serving and directory listing made by a Designer",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "files": [
     "bin",
     "example",
@@ -66,7 +66,7 @@
     "generate-example": "node ./icon-generator/build.js"
   },
   "lint-staged": {
-    "*.js": [
+    "*.{js,jsx}": [
       "npm run js-lint",
       "git add"
     ]

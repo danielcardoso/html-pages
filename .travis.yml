@@ -6,7 +6,10 @@ env:
 
 os:
   - linux
-  - osx
+#  - osx
+
+sudo:
+  - false
 
 language: node_js
 
