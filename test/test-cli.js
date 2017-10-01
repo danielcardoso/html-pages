@@ -44,6 +44,7 @@ describe('command line usage', function () {
       done();
     });
   });
+
   it('-v', done => {
     executeTest(['-v'], (error, stdout, stdin) => {
       assert(!error, error);
@@ -51,6 +52,7 @@ describe('command line usage', function () {
       done();
     });
   });
+
   it('--help', done => {
     executeTest(['--help'], (error, stdout, stdin) => {
       assert(!error, error);
@@ -58,6 +60,7 @@ describe('command line usage', function () {
       done();
     });
   });
+
   it('-h', done => {
     executeTest(['-h'], (error, stdout, stdin) => {
       assert(!error, error);
@@ -65,6 +68,7 @@ describe('command line usage', function () {
       done();
     });
   });
+
   it('--localhost', done => {
     executeTest(['--localhost', '--port=8080'], (error, stdout, stdin) => {
       assert(!error, error);
@@ -73,6 +77,7 @@ describe('command line usage', function () {
       done();
     });
   });
+
   it('--port', done => {
     executeTest(['--port=14123', '--localhost'], (error, stdout, stdin) => {
       assert(!error, error);
@@ -91,6 +96,7 @@ describe('command line usage', function () {
   //     done();
   //   });
   // });
+
   it('--verbose', done => {
     executeTest(['--verbose'], (error, stdout, stdin) => {
       assert(!error, error);
@@ -102,6 +108,7 @@ describe('command line usage', function () {
       done();
     });
   });
+
   it('-V', done => {
     executeTest(['-V'], (error, stdout, stdin) => {
       assert(!error, error);
@@ -113,6 +120,7 @@ describe('command line usage', function () {
       done();
     });
   });
+
   it('--silent', done => {
     executeTest(['--silent'], (error, stdout, stdin) => {
       assert(!error, error);
@@ -120,6 +128,7 @@ describe('command line usage', function () {
       done();
     });
   });
+
   it('-S', done => {
     executeTest(['-S'], (error, stdout, stdin) => {
       assert(!error, error);
