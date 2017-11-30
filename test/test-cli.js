@@ -71,10 +71,6 @@ describe('command line usage', function () {
 
   it('--localhost', done => {
     executeTest(['--localhost', '--port=8888'], (error, stdout, stdin) => {
-      console.log('error', error);
-      console.log('stdout', stdout);
-      console.log('stdin', stdin);
-
       assert(!error, error);
       assert(stdout.indexOf('Server is ready!') !== -1, 'Server is not ready!');
       assert(stdout.indexOf('http://localhost:8888') !== -1, 'Localhost not found');
