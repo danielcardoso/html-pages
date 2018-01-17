@@ -92,7 +92,7 @@
               '</li>' +
               '</ul><ul class="html-pages__resources-list">' +
             '<% } %>' +
-            '<%- console.log(type, file) %>' +
+            // '<%- console.log(type, file) %>' +
             '<%= renderItemGridTemplate({item: file, structure: structure}) %>' +
           '<% }); %>' +
         '<% } else { %>' +
