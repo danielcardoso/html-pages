@@ -10,8 +10,8 @@ environment:
     PAGES_PASSWORD: 1904
   matrix:
     - nodejs_version: "6"
-    - nodejs_version: "7"
     - nodejs_version: "8"
+    - nodejs_version: "9"
 
 # build platform, i.e. x86, x64, Any CPU. This setting is optional.
 platform:
