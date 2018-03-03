@@ -164,6 +164,8 @@ pagesServer.stop()
 
 ## Version history
 
+* v2.1.0
+  - Security updates
 * v2.0.0
   - Specify the page layout. Available options `grid` or `list`
   - Add `host` address to bind to. By default it supports "any address"
