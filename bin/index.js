@@ -49,6 +49,7 @@ if (directory) {
   current = path.resolve(process.cwd(), directory);
 }
 
+process.env.SERVER_PATH = path.join(__dirname, '/../');
 process.env.CURRENT_PATH = current;
 process.env.ASSET_DIR = path.normalize('/@' + pkg.name + '-internal-files-' + Math.random().toString(36).substr(2, 16));
 
