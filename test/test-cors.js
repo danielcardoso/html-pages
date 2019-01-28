@@ -25,7 +25,7 @@ describe('cors tests', function () {
   });
 
   it('should respond with appropriate header', function (done) {
-    server = serverCaller.startServer({cors: true});
+    server = serverCaller.startServer({ cors: true });
     htmlPages = server.htmlPages;
 
     request(server.httpHost)
@@ -42,7 +42,7 @@ describe('cors tests', function () {
       });
   });
   it('should support preflighted requests', function (done) {
-    server = serverCaller.startServer({cors: true});
+    server = serverCaller.startServer({ cors: true });
     htmlPages = server.htmlPages;
 
     request(server.httpHost)
@@ -61,7 +61,7 @@ describe('cors tests', function () {
       });
   });
   it('should support requests with credentials', function (done) {
-    server = serverCaller.startServer({cors: true});
+    server = serverCaller.startServer({ cors: true });
     htmlPages = server.htmlPages;
 
     request(server.httpHost)
