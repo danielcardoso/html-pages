@@ -20,7 +20,7 @@
     "html-pages": "./bin/index.js"
   },
   "engines": {
-    "node": ">=6.6.0"
+    "node": ">=8.6.0"
   },
   "author": {
     "name": "Daniel Cardoso",
