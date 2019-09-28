@@ -1,0 +1,279 @@
+/*
+ *  The copyright of this file belongs to Daniel Cardoso. The file cannot be
+ *  reproduced in whole or in part, stored in a retrieval system,
+ *  transmitted in any form, or by any means electronic, mechanical,
+ *  photocopying, or otherwise, without the prior permission of the owner.
+ *
+ *  (c) 2017 Daniel Cardoso
+ */
+
+/**
+ * Functions
+ */
+
+/**
+ * Translate breakpoints to a Media Query string
+ *
+ * @param  {string} $orientation                If is a 'horizontal' or 'vertical' media query
+ * @param  {map} $breakpoint                    List of breakpoints
+ * @param  {boolean} $no-min:     false         If there is no lower breakpoint
+ * @param  {boolean} $no-max:     false         If there is no upper breakpoint
+ * @return {string}                             Media Query string
+ *
+ * @private function
+ */
+@function _translate-breakpoints-to-media-condition($orientation, $breakpoint, $no-min: false, $no-max: false) {
+    $breakpoint-list: null;
+    $breakpoint-start: null;
+    $breakpoint-end: null;
+    $size-property: null;
+
+    @if $orientation == horizontal or $orientation == vertical {
+        @if $orientation == horizontal {
+            $breakpoint-list: $breakpoint-horizontal;
+            $size-property: "width";
+        }
+        @else {
+            $breakpoint-list: $breakpoint-vertical;
+            $size-property: "height";
+        }
+
+        @if type-of($breakpoint) == map {
+            $breakpoint-start: map-get($breakpoint, start);
+            $breakpoint-end: map-get($breakpoint, end);
+        }
+        @elseif type-of($breakpoint) == string {
+            $breakpoint-start: $breakpoint;
+            $breakpoint-end: $breakpoint;
+        }
+        @else {
+            @return false;
+        }
+
+        @if list-has-key($breakpoint-list, $breakpoint-start) list-has-key($breakpoint-list, $breakpoint-end) {
+            // Get min and max values for the current breakpoint
+            $breakpoint-values-min: map-get(map-get($breakpoint-list, $breakpoint-start), min);
+            $breakpoint-values-max: map-get(map-get($breakpoint-list, $breakpoint-end), max);
+            // initializate media query string
+            $media-query: "only screen";
+
+            @if $breakpoint-values-min != false and $no-min == false {
+                $media-query: $media-query + " and (min-#{$size-property}: #{$breakpoint-values-min})";
+            }
+            @if $breakpoint-values-max != false and $no-max == false {
+                $media-query: $media-query + " and (max-#{$size-property}: #{$breakpoint-values-max})";
+            }
+
+            @return $media-query;
+        }
+        @else {
+            @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. " +
+            "Please make sure it is defined in `$breakpoints-#{$orientation}` map.";
+        }
+    }
+    @else {
+        @warn "The $orientation value must be defined as 'horizontal' or 'vertical', not `#{$orientation}`.";
+    }
+}
+
+/**
+ * Generate a media query for a breakpoint
+ *
+ * @param  {string} $orientation       If is a 'horizontal' or 'vertical' media query
+ * @param  {map} $breakpoint           List of breakpoints
+ * @return {string}                    Media Query string
+ *
+ * @private function
+ */
+@mixin _breakpoint($orientation, $breakpoint) {
+    $media-query: _translate-breakpoints-to-media-condition($orientation, $breakpoint);
+    @if $media-query != false {
+        @media #{$media-query} {
+            @content;
+        }
+    }
+    @else {
+        @warn "Something wrong happens when generating media queries";
+    }
+}
+
+/**
+ * Generate a media query from a breakpoint to infinite
+ *
+ * @param  {string} $orientation       If is a 'horizontal' or 'vertical' media query
+ * @param  {string} $breakpoint        Init breakpoint
+ * @return {string}                    Media Query string
+ *
+ * @private function
+ */
+@mixin _breakpoint-min($orientation, $breakpoint) {
+    $media-query: _translate-breakpoints-to-media-condition($orientation, $breakpoint, false, true);
+    @if $media-query != false {
+        @media #{$media-query} {
+            @content;
+        }
+    }
+    @else {
+        @warn "Something wrong happens when generating media queries";
+    }
+}
+
+/**
+ * Generate a media query from zero to a breakpoint
+ *
+ * @param  {string} $orientation       If is a 'horizontal' or 'vertical' media query
+ * @param  {string} $breakpoint        End breakpoint
+ * @return {string}                    Media Query string
+ *
+ * @private function
+ */
+@mixin _breakpoint-max($orientation, $breakpoint) {
+    $media-query: _translate-breakpoints-to-media-condition($orientation, $breakpoint, true);
+    @if $media-query != false {
+        @media #{$media-query} {
+            @content;
+        }
+    }
+    @else {
+        @warn "Something wrong happens when generating media queries";
+    }
+}
+
+/**
+ * Generate a media query for two breakpoints
+ *
+ * @param  {string} $orientation       If is a 'horizontal' or 'vertical' media query
+ * @param  {string} $breakpoint-start  Init breakpoint
+ * @param  {string} $breakpoint-end    End breakpoint
+ * @return {string}                    Media Query string
+ *
+ * @private function
+ */
+@mixin _breakpoint-between($orientation, $breakpoint-start, $breakpoint-end) {
+    $media-query: _translate-breakpoints-to-media-condition($orientation, (start: $breakpoint-start, end: $breakpoint-end));
+    @if $media-query != false {
+        @media #{$media-query} {
+            @content;
+        }
+    }
+    @else {
+        @warn "Something wrong happens when generating media queries";
+    }
+}
+
+/**
+ * Horizontal Breakpoints
+ */
+
+/**
+ * Create a horizontal media query a breakpoint
+ *
+ * @param  {string} $breakpoint        Breakpoint
+ * @return {string}                    Media Query string
+ *
+ */
+@mixin breakpoint-horizontal($breakpoint) {
+    @include _breakpoint(horizontal, $breakpoint) {
+        @content;
+    }
+}
+
+
+/**
+ * Create a horizontal media query from a breakpoint to infinite
+ *
+ * @param  {string} $breakpoint        Init breakpoint
+ * @return {string}                    Media Query string
+ *
+ */
+@mixin breakpoint-horizontal-min($breakpoint) {
+    @include _breakpoint-min(horizontal, $breakpoint) {
+        @content;
+    }
+}
+
+
+/**
+ * Create a horizontal media query from zero to a breakpoint
+ *
+ * @param  {string} $breakpoint        End breakpoint
+ * @return {string}                    Media Query string
+ *
+ */
+@mixin breakpoint-horizontal-max($breakpoint) {
+    @include _breakpoint-max(horizontal, $breakpoint) {
+        @content;
+    }
+}
+
+
+/**
+ * Create a horizontal media query for two breakpoints
+ *
+ * @param  {string} $breakpoint-start  Init breakpoint
+ * @param  {string} $breakpoint-end    End breakpoint
+ * @return {string}                    Media Query string
+ */
+@mixin breakpoint-horizontal-between($breakpoint-start, $breakpoint-end) {
+    @include _breakpoint-between(horizontal, $breakpoint-start, $breakpoint-end) {
+        @content;
+    }
+}
+
+
+/**
+ * Vertical Breakpoints
+ */
+
+/**
+ * Create a vertical media query a breakpoint
+ *
+ * @param  {string} $breakpoint        Breakpoint
+ * @return {string}                    Media Query string
+ *
+ */
+@mixin breakpoint-vertical($breakpoint) {
+    @include _breakpoint(vertical, $breakpoint) {
+        @content;
+    }
+}
+
+/**
+ * Create a vertical media query from a breakpoint to infinite
+ *
+ * @param  {string} $breakpoint        Init breakpoint
+ * @return {string}                    Media Query string
+ *
+ */
+@mixin breakpoint-vertical-min($breakpoint) {
+    @include _breakpoint-min(vertical, $breakpoint) {
+        @content;
+    }
+}
+
+/**
+ * Create a vertical media query from zero to a breakpoint
+ *
+ * @param  {string} $breakpoint        End breakpoint
+ * @return {string}                    Media Query string
+ *
+ */
+@mixin breakpoint-vertical-max($breakpoint) {
+    @include _breakpoint-max(vertical, $breakpoint) {
+        @content;
+    }
+}
+
+
+/**
+ * Create a vertical media query for two breakpoints
+ *
+ * @param  {string} $breakpoint-start  Init breakpoint
+ * @param  {string} $breakpoint-end    End breakpoint
+ * @return {string}                    Media Query string
+ */
+@mixin breakpoint-vertical-between($breakpoint-start, $breakpoint-end) {
+    @include _breakpoint-between(vertical, $breakpoint-start, $breakpoint-end) {
+        @content;
+    }
+}
