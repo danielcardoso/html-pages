@@ -11,16 +11,13 @@ describe('http codes tests', function () {
   this.timeout(5000);
 
   beforeEach(function () {
-    // mlog.log('Start test');
   });
 
   afterEach(function () {
-    // mlog.log('End test\n');
     htmlPages.stop();
   });
 
   after(function () {
-    // mlog.log('End off all tests\n');
     htmlPages.stop();
   });
 
@@ -54,7 +51,7 @@ describe('http codes tests', function () {
 
   it('should respond with http code status 401', function (done) {
     server = serverCaller.startServer({
-      'auth': true
+      auth: true
     });
     htmlPages = server.htmlPages;
 

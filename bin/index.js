@@ -21,7 +21,7 @@ const FunctionalUtils = require('../lib/functional-utils');
 const ParseCommandLineArgs = require('../lib/parse-command-line-args');
 const logger = require('../lib/logger');
 
-let HtmlPages = {
+const HtmlPages = {
   server: null
 };
 
@@ -97,7 +97,7 @@ const handler = coroutine(function * (req, res) {
 
 HtmlPages.server = flags.unzipped ? micro(handler) : micro(compress(handler));
 let port = flags.port;
-let host = flags.host;
+const host = flags.host;
 
 detect(port).then(open => {
   let inUse = open !== port;

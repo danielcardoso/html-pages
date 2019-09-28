@@ -35,7 +35,7 @@ describe('ignore files tests', function () {
 
   it('should respond with all folders and pages', function (done) {
     server = serverCaller.startServer({
-      'ignore': [],
+      ignore: [],
       'directory-index': 'false'
     });
     htmlPages = server.htmlPages;
@@ -59,7 +59,7 @@ describe('ignore files tests', function () {
 
   it('should respond without html files', function (done) {
     server = serverCaller.startServer({
-      'ignore': ['*.html'],
+      ignore: ['*.html'],
       'directory-index': 'false'
     });
     htmlPages = server.htmlPages;
@@ -80,7 +80,7 @@ describe('ignore files tests', function () {
 
   it('should respond without files', function (done) {
     server = serverCaller.startServer({
-      'ignore': ['*'],
+      ignore: ['*'],
       'directory-index': 'false'
     });
     htmlPages = server.htmlPages;
