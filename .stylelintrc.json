@@ -1,0 +1,12 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "defaultSeverity": "warning",
+  "rules": {
+    "indentation": 4,
+    "block-no-empty": null,
+    "max-empty-lines": 3,
+    "color-no-invalid-hex": true,
+    "unit-whitelist": ["em", "rem", "%", "px"],
+    "node/no-deprecated-api": "off"
+  }
+}
